@@ -5,7 +5,9 @@ import Header from "../components/Header.tsx";
 import Layout from "../components/Layout.tsx";
 import H1 from "../components/H1.tsx";
 import ProgramCard from "../islands/ProgramCard.tsx";
-import programs from "../static/programs.json" assert { type: "json" };
+import PersonalityCard from "../components/PersonalityCard.tsx";
+import programs from "../static/programs.ts";
+import personalities from "../static/personalities.ts";
 
 export default function Home() {
   const nowPlaying = 0;
@@ -26,6 +28,7 @@ export default function Home() {
 
         <div class={tw`mt-8`} />
         <H1 text="Personalities" />
+        <PersonalityCard personalities={personalities} />
 
         <div class={tw`mt-8`} />
         <H1 text="Contents" />

@@ -8,7 +8,6 @@ export default function header() {
     <div>
       <Head>
         <title>YosLab M2 Radio 2022</title>
-        <meta name="viewport" content="width=device-width,minimal-ui" />
       </Head>
       <header
         class={tw`p-6 h-16 bg-[#9FA6ED] text-white flex flex-row items-center font-black`}
