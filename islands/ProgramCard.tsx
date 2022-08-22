@@ -2,17 +2,13 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import { useEffect, useRef, useState } from "preact/hooks";
+import { Program } from "../types/Program.ts";
 
-type Props = {
-  iconName: string;
-  title: string;
-  personalityLastNames: string[];
-  overview: string;
-  playtime: number;
+type Props = Program & {
   isTransition: boolean;
 };
 
-export default function header(props: Props) {
+export default function ProgramCard(props: Props) {
   const targetRef = useRef(null);
   const [displayStyle, setDisplayStyle] = useState("");
 

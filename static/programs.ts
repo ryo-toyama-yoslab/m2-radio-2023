@@ -1,12 +1,6 @@
-type Props = {
-  iconName: string;
-  title: string;
-  personalityLastNames: string[];
-  overview: string;
-  playtime: number;
-};
+import { Program } from "../types/Program.ts";
 
-const programs: Props[] = [
+const programs: Program[] = [
   {
     "iconName": "t-rex",
     "title": "Mr.林のマシンガントーク ~ジョジョ編~",
