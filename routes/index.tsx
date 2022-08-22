@@ -4,7 +4,7 @@ import { tw } from "@twind";
 import Header from "../components/Header.tsx";
 import Layout from "../components/Layout.tsx";
 import H1 from "../components/H1.tsx";
-import ProgramCard from "../components/ProgramCard.tsx";
+import ProgramCard from "../islands/ProgramCard.tsx";
 import programs from "../static/programs.json" assert { type: "json" };
 
 export default function Home() {
@@ -21,6 +21,7 @@ export default function Home() {
           personalityLastNames={programs[nowPlaying].personalityLastNames}
           overview={programs[nowPlaying].overview}
           playtime={programs[nowPlaying].playtime}
+          isTransition={false}
         />
 
         <div class={tw`mt-8`} />
@@ -36,6 +37,7 @@ export default function Home() {
               personalityLastNames={program.personalityLastNames}
               overview={program.overview}
               playtime={program.playtime}
+              isTransition={true}
             />
           ))}
         </div>

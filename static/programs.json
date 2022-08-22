@@ -12,5 +12,19 @@
     "personalityLastNames": ["鈴木", "林", "田中"],
     "overview": "あなたのユニークなマイブームを教えて下さい．後輩を誰よりも理解しているM2ならあなたが誰か当てられる(はず)．",
     "playtime": 21
+  },
+  {
+    "iconName": "radio",
+    "title": "このマイブームはあなたのだ！",
+    "personalityLastNames": ["鈴木", "林", "田中"],
+    "overview": "あなたのユニークなマイブームを教えて下さい．後輩を誰よりも理解しているM2ならあなたが誰か当てられる(はず)．",
+    "playtime": 21
+  },
+  {
+    "iconName": "radio",
+    "title": "このマイブームはあなたのだ！",
+    "personalityLastNames": ["鈴木", "林", "田中"],
+    "overview": "あなたのユニークなマイブームを教えて下さい．後輩を誰よりも理解しているM2ならあなたが誰か当てられる(はず)．",
+    "playtime": 21
   }
 ]
