@@ -21,7 +21,7 @@ export default function header(props: Props) {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.1,
+      threshold: 0.01,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -40,7 +40,7 @@ export default function header(props: Props) {
 
   return (
     <div
-      class={tw`mt-4 p-6 rounded-[10px] border-4 border-[#9FA6ED] transition-all duration-500 ease-out ${displayStyle}`}
+      class={tw`mt-4 p-6 rounded-[10px] border-4 border-[#9FA6ED] transition-all duration-700 ease-out ${displayStyle}`}
       ref={targetRef}
     >
       <div class={tw`flex flex-row justify-start`}>
