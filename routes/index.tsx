@@ -11,6 +11,10 @@ export default function Home() {
       <Header />
       <Layout>
         <H1 text="Now Playing" />
+        <div class={tw`mt-8`} />
+        <H1 text="Personalities" />
+        <div class={tw`mt-8`} />
+        <H1 text="Contents" />
       </Layout>
     </div>
   );

@@ -4,7 +4,7 @@ import { tw } from "@twind";
 
 export default function header(props: { text: string }) {
   return (
-    <div class={tw`text-3xl font-black`}>
+    <div class={tw`text-4xl font-black`}>
       {props.text}
     </div>
   );
