@@ -5,7 +5,7 @@ import Header from "../components/Header.tsx";
 import Layout from "../components/Layout.tsx";
 import H1 from "../components/H1.tsx";
 import ProgramCard from "../islands/ProgramCard.tsx";
-import PersonalityCard from "../components/PersonalityCard.tsx";
+import PersonalityCard from "../islands/PersonalityCard.tsx";
 import programs from "../static/programs.ts";
 import personalities from "../static/personalities.ts";
 

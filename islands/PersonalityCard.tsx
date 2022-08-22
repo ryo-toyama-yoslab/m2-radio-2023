@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
+import { useEffect, useRef, useState } from "preact/hooks";
 import { Personality } from "../types/Personality.ts";
 
 type Props = {
@@ -8,8 +9,35 @@ type Props = {
 };
 
 export default function PersonalityCard(props: Props) {
+  const targetRef = useRef(null);
+  const [displayStyle, setDisplayStyle] = useState("");
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      const [entry] = entries;
+      setDisplayStyle(
+        entry.isIntersecting ? "opacity-1 visible" : "opacity-0 invisible",
+      );
+    }, options);
+
+    if (targetRef.current) observer.observe(targetRef.current);
+
+    return () => {
+      if (targetRef.current) observer.unobserve(targetRef.current);
+    };
+  }, [targetRef]);
+
   return (
-    <div class={tw`overflow-hidden text-ellipsis whitespace-nowrap`}>
+    <div
+      class={tw`overflow-hidden text-ellipsis whitespace-nowrap transition-all duration-700 ease-out ${displayStyle}`}
+      ref={targetRef}
+    >
       {props.personalities.map((personality) => (
         <div class={tw`flex flex-row mt-4`}>
           <img

@@ -3,14 +3,16 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/index.tsx";
-import * as $$0 from "./islands/ProgramCard.tsx";
+import * as $$0 from "./islands/PersonalityCard.tsx";
+import * as $$1 from "./islands/ProgramCard.tsx";
 
 const manifest = {
   routes: {
     "./routes/index.tsx": $0,
   },
   islands: {
-    "./islands/ProgramCard.tsx": $$0,
+    "./islands/PersonalityCard.tsx": $$0,
+    "./islands/ProgramCard.tsx": $$1,
   },
   baseUrl: import.meta.url,
 };
