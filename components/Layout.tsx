@@ -5,8 +5,7 @@ import { tw } from "@twind";
 export default function header(props: { children: JSX.Element[] }) {
   return (
     <div
-      class={tw`p-6 mx-auto max-w-screen-md overflow-scroll`}
-      style={{ "overflow-scrolling": "touch" }}
+      class={tw`p-6 mx-auto max-w-screen-md`}
     >
       {props.children}
     </div>

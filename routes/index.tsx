@@ -13,7 +13,10 @@ export default function Home() {
   const nowPlaying = 0;
 
   return (
-    <div class={tw`text-[#45454D]`}>
+    <div
+      class={tw`text-[#45454D] overflow-scroll`}
+      style={{ "overflow-scrolling": "touch", "height": "100svh" }}
+    >
       <Header />
       <Layout>
         <H1 text="Now Playing" />
