@@ -40,7 +40,7 @@ export default function header(props: Props) {
 
   return (
     <div
-      class={tw`mt-4 p-6 rounded-[10px] border-4 border-[#9FA6ED] transition-all duration-700 ease-in-out ${displayStyle}`}
+      class={tw`mt-4 p-6 rounded-[10px] border-4 border-[#9FA6ED] transition-all duration-300 ease-out ${displayStyle}`}
       ref={targetRef}
     >
       <div class={tw`flex flex-row justify-start`}>
