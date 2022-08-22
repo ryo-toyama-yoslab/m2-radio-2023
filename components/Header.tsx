@@ -11,6 +11,7 @@ export default function header() {
         src={"/radio_3d.png"}
         alt="radio icon"
         class={tw`h-8`}
+        loading="lazy"
       />
       <p class={tw`ml-2 mt-1`}>YosLab M2 Radio 2022</p>
     </header>
