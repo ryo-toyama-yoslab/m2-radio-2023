@@ -5,24 +5,40 @@ import Header from "../components/Header.tsx";
 import Layout from "../components/Layout.tsx";
 import H1 from "../components/H1.tsx";
 import ProgramCard from "../components/ProgramCard.tsx";
+import programs from "../static/programs.json" assert { type: "json" };
 
 export default function Home() {
+  const nowPlaying = 0;
+
   return (
     <div class={tw`text-[#45454D]`}>
       <Header />
       <Layout>
         <H1 text="Now Playing" />
         <ProgramCard
-          iconName="t-rex"
-          title="Mr.林のマシンガントーク ~ジョジョ編~"
-          personalityLastNames={["林", "酒井"]}
-          overview="林は、ジョジョが持つ「マシンガン」を使って、自分の身体を覚醒させる。"
-          playtime={60}
+          iconName={programs[nowPlaying].iconName}
+          title={programs[nowPlaying].title}
+          personalityLastNames={programs[nowPlaying].personalityLastNames}
+          overview={programs[nowPlaying].overview}
+          playtime={programs[nowPlaying].playtime}
         />
+
         <div class={tw`mt-8`} />
         <H1 text="Personalities" />
+
         <div class={tw`mt-8`} />
         <H1 text="Contents" />
+        <div>
+          {programs.map((program) => (
+            <ProgramCard
+              iconName={program.iconName}
+              title={program.title}
+              personalityLastNames={program.personalityLastNames}
+              overview={program.overview}
+              playtime={program.playtime}
+            />
+          ))}
+        </div>
       </Layout>
     </div>
   );

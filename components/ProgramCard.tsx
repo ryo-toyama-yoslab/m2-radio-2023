@@ -17,7 +17,7 @@ export default function header(props: Props) {
         <img
           src={`/${props.iconName}_3d.png`}
           alt={props.iconName}
-          class={tw`h-12`}
+          class={tw`h-8`}
         />
         <div class={tw`flex flex-col ml-6`}>
           <div class={tw`text-xl font-bold`}>{props.title}</div>
