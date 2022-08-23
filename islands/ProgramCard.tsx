@@ -12,7 +12,6 @@ type Props = Program & {
 };
 
 const ProgramCard = (props: Props) => {
-  console.log("render: " + props.id);
   const targetRef = useRef(null);
   const [displayStyle, setDisplayStyle] = useState("");
 
@@ -58,7 +57,7 @@ const ProgramCard = (props: Props) => {
         </div>
       </div>
       <div class={tw`text-sm mt-6`}>{props.overview}</div>
-      <div class={tw`flex justify-between items-end font-bold text-sm mt-6`}>
+      <div class={tw`flex justify-between items-end font-bold text-sm mt-10`}>
         <div class={tw`text-sm font-normal text-[#9B9B9F]`}>
           再生時間：{props.playtime}分
         </div>
