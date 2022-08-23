@@ -3,7 +3,7 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { Program } from "../types/Program.ts";
-// import { memo } from "preact/compat";
+import { memo } from "preact/compat";
 
 type Props = Program & {
   isTransition: boolean;
@@ -68,6 +68,6 @@ const ProgramCard = (props: Props) => {
   );
 };
 
-const ProgramCardMemo = ProgramCard;
+const ProgramCardMemo = memo(ProgramCard);
 
 export default ProgramCardMemo;
