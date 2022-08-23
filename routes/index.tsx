@@ -14,7 +14,11 @@ export default function Home() {
   return (
     <div
       class={tw`text-[#45454D] overflow-scroll`}
-      style={{ "overflow-scrolling": "touch", "height": "100svh" }}
+      style={{
+        "overflow-scrolling": "touch",
+        "height": "100svh",
+        "touch-action": "manipulation",
+      }}
     >
       <Header />
       <Layout>
