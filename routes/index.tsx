@@ -1,6 +1,5 @@
 /** @jsx h */
 import { h } from "preact";
-import { useState } from "preact/hooks";
 import { tw } from "@twind";
 import Header from "../components/Header.tsx";
 import Layout from "../components/Layout.tsx";
@@ -31,6 +30,7 @@ export default function Home() {
           overview={programs[nowPlaying].overview}
           playtime={programs[nowPlaying].playtime}
           isTransition={false}
+          clap={0}
         />
 
         <div class={tw`mt-8`} />

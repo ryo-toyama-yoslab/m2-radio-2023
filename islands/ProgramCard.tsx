@@ -7,10 +7,11 @@ import { memo } from "preact/compat";
 
 type Props = Program & {
   isTransition: boolean;
+  clap: number;
 };
 
 const ProgramCard = (props: Props) => {
-  console.log(props.id);
+  console.log("update:" + props.title);
   const targetRef = useRef(null);
   const [displayStyle, setDisplayStyle] = useState("");
 
@@ -57,7 +58,7 @@ const ProgramCard = (props: Props) => {
       </div>
       <div class={tw`text-sm mt-6`}>{props.overview}</div>
       <div class={tw`flex justify-end font-bold text-sm mt-6`}>
-        {props.playtime}分
+        拍手：{props.clap}回
       </div>
     </div>
   );

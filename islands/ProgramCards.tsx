@@ -9,16 +9,17 @@ const ProgramCards = (props: { programs: Program[] }) => {
   const [claps, setClaps] = useState<number[]>([0, 1, 2, 3]);
 
   const handleOnClick = () => {
-    console.log("newClaps");
-    const newClaps = claps.map((clap) => clap + 1);
-    console.log(newClaps);
+    const newClaps = claps.map((clap, index) =>
+      index % 2 === 0 ? clap + 1 : clap
+    );
+    // console.log(newClaps);
     setClaps(newClaps);
   };
 
   return (
     <div>
       <Button onClick={handleOnClick}>クラップ</Button>
-      {props.programs.map((program) => (
+      {props.programs.map((program, index) => (
         <ProgramCardMemo
           id={program.id}
           iconName={program.iconName}
@@ -27,6 +28,7 @@ const ProgramCards = (props: { programs: Program[] }) => {
           overview={program.overview}
           playtime={program.playtime}
           isTransition={true}
+          clap={claps[index]}
         />
       ))}
     </div>
