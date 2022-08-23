@@ -3,12 +3,14 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { Program } from "../types/Program.ts";
+import { memo } from "preact/compat";
 
 type Props = Program & {
   isTransition: boolean;
 };
 
-export default function ProgramCard(props: Props) {
+const ProgramCard = (props: Props) => {
+  console.log(props.id);
   const targetRef = useRef(null);
   const [displayStyle, setDisplayStyle] = useState("");
 
@@ -59,4 +61,8 @@ export default function ProgramCard(props: Props) {
       </div>
     </div>
   );
-}
+};
+
+const ProgramCardMemo = memo(ProgramCard);
+
+export default ProgramCardMemo;
