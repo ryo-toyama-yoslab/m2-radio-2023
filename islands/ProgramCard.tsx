@@ -62,19 +62,19 @@ const ProgramCard = (props: Props) => {
           再生時間：{props.playtime}分
         </div>
         <div class={tw`flex flex-row justify-start items-center`}>
-          <img
-            src={`/clapping_hands_3d.png`}
-            alt={props.iconName}
-            class={tw`h-8 transition-all active:scale-[2] duration-300 ease-out`}
-            loading="lazy"
-            onClick={() => props.handleOnClick(props.id)}
-            onTouchStart={(e) => ""}
-          />
-          <div class={tw`flex flex-col ml-2`}>
+          <div class={tw`flex flex-col mr-2 mt-1`}>
             <div class={tw`text-2xl font-bold`}>
               {props.clap}
             </div>
           </div>
+          <img
+            src={`/clapping_hands_3d.png`}
+            alt={props.iconName}
+            class={tw`h-8 transition-all active:scale-[2] duration-100`}
+            loading="lazy"
+            onClick={() => props.handleOnClick(props.id)}
+            onTouchStart={(e) => ""}
+          />
         </div>
       </div>
     </div>

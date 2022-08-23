@@ -19,7 +19,6 @@ export default function Home() {
         "height": "100svh",
         "touch-action": "manipulation",
       }}
-      onTouchStart={(e) => ""}
     >
       <Header />
       <Layout>
