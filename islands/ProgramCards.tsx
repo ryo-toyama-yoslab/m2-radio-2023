@@ -1,7 +1,6 @@
 import { Program } from "../types/Program.ts";
 import ProgramCardMemo from "../islands/ProgramCard.tsx";
 import { useCallback, useEffect, useState } from "preact/hooks";
-import React from "https://esm.sh/v92/preact@10.10.0/compat/src/index";
 
 const getClaps = async () => {
   const claps = await fetch(
@@ -53,6 +52,8 @@ const ProgramCards = (props: { programs: Program[] }) => {
     */
   }, []);
 
+  {
+    /*
   return (
     <div>
       {props.programs.map((program) => {
@@ -72,7 +73,9 @@ const ProgramCards = (props: { programs: Program[] }) => {
         );
       })}
     </div>
-  );
+    */
+  }
+  return;
 };
 
 export default ProgramCards;
