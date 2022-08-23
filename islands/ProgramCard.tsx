@@ -65,7 +65,7 @@ const ProgramCard = (props: Props) => {
           <img
             src={`/clapping_hands_3d.png`}
             alt={props.iconName}
-            class={tw`h-8 transition-all hover:scale-[2] active:scale-[2] duration-300 ease-out`}
+            class={tw`h-8 transition-all hover:scale-[2] duration-300 ease-out`}
             loading="lazy"
             onClick={() => props.handleOnClick(props.id)}
           />
