@@ -68,6 +68,7 @@ const ProgramCard = (props: Props) => {
             class={tw`h-8 transition-all active:scale-[2] duration-300 ease-out`}
             loading="lazy"
             onClick={() => props.handleOnClick(props.id)}
+            onTouchStart={(e) => ""}
           />
           <div class={tw`flex flex-col ml-2`}>
             <div class={tw`text-2xl font-bold`}>
