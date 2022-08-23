@@ -19,25 +19,29 @@ const ProgramCards = (props: { programs: Program[] }) => {
 
   useEffect(() => {
     const inner = async () => {
-      const claps = await getClaps();
-      setClaps(claps);
+      const newClaps = await getClaps();
+      setClaps(newClaps);
     };
     inner();
 
     setInterval(async () => {
-      const claps = await getClaps();
-      setClaps(claps);
+      const newClaps = await getClaps();
+      setClaps((prevClaps) => {
+        return JSON.stringify(prevClaps) !== JSON.stringify(newClaps)
+          ? newClaps
+          : prevClaps;
+      });
     }, 10000);
   }, []);
 
   const handleOnClick = useCallback(async (id: number) => {
-    const newClaps = claps.map((clap) =>
-      clap.id == id
-        ? { id: clap.id, count: Number(clap.count) + 1 }
-        : { id: clap.id, count: Number(clap.count) }
+    setClaps((prevClaps) =>
+      prevClaps.map((clap) =>
+        clap.id == id
+          ? { id: clap.id, count: Number(clap.count) + 1 }
+          : { id: clap.id, count: Number(clap.count) }
+      )
     );
-    setClaps(newClaps);
-    console.log(newClaps);
     await fetch(
       "https://www3.yoslab.net/~nishimura/yoslab-radio/updateClap.php",
       {
@@ -48,7 +52,7 @@ const ProgramCards = (props: { programs: Program[] }) => {
         },
       },
     );
-  }, [claps]);
+  }, []);
 
   return (
     <div>

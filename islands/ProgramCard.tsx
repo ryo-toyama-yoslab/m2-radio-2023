@@ -12,6 +12,7 @@ type Props = Program & {
 };
 
 const ProgramCard = (props: Props) => {
+  console.log("render: " + props.id);
   const targetRef = useRef(null);
   const [displayStyle, setDisplayStyle] = useState("");
 
@@ -62,15 +63,16 @@ const ProgramCard = (props: Props) => {
           再生時間：{props.playtime}分
         </div>
         <div class={tw`flex flex-row justify-start items-center`}>
-          <div class={tw`flex flex-col mr-2 mt-1`}>
-            <div class={tw`text-2xl font-bold`}>
+          <div class={tw`flex flex-row items-center mr-2 mt-2`}>
+            <span class={tw`text-2xl font-bold`}>
               {props.clap}
-            </div>
+            </span>
+            <span class={tw`ml-1 mt-2 text-xs`}>claps!</span>
           </div>
           <img
             src={`/clapping_hands_3d.png`}
             alt={props.iconName}
-            class={tw`h-8 transition-all active:scale-[2] duration-100`}
+            class={tw`h-10 transition-all active:scale-[2] duration-100`}
             loading="lazy"
             onClick={() => props.handleOnClick(props.id)}
             onTouchStart={(e) => ""}
