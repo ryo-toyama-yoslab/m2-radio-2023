@@ -12,7 +12,6 @@ type Props = Program & {
 };
 
 const ProgramCard = (props: Props) => {
-  console.log("update:" + props.title);
   const targetRef = useRef(null);
   const [displayStyle, setDisplayStyle] = useState("");
 

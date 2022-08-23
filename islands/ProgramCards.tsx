@@ -27,32 +27,28 @@ const ProgramCards = (props: { programs: Program[] }) => {
     setInterval(async () => {
       const claps = await getClaps();
       setClaps(claps);
-    }, 1000);
+    }, 10000);
   }, []);
 
   const handleOnClick = useCallback(async (id: number) => {
-    const postItem = { id: id };
+    const newClaps = claps.map((clap) =>
+      clap.id == id
+        ? { id: clap.id, count: Number(clap.count) + 1 }
+        : { id: clap.id, count: Number(clap.count) }
+    );
+    setClaps(newClaps);
+    console.log(newClaps);
     await fetch(
       "https://www3.yoslab.net/~nishimura/yoslab-radio/updateClap.php",
       {
         method: "POST",
-        body: JSON.stringify(postItem),
+        body: JSON.stringify({ id: id }),
         headers: {
           "Content-Type": "application/json",
         },
       },
     );
-    /*
-    console.log(id);
-    setClaps(
-      claps.map((clap) =>
-        clap.id == id
-          ? { id: id, count: clap.count + 1 }
-          : { id: id, count: clap.count }
-      ),
-    );
-    */
-  }, []);
+  }, [claps]);
 
   return (
     <div>
