@@ -1,10 +1,18 @@
 import { Program } from "../types/Program.ts";
 import ProgramCardMemo from "../islands/ProgramCard.tsx";
 import React, {
+  useCallback,
   useEffect,
   useState,
 } from "https://esm.sh/v92/preact@10.10.0/compat/src/index";
-import Button from "./Button.tsx";
+
+const getClaps = async () => {
+  const claps = await fetch(
+    "https://www3.yoslab.net/~nishimura/yoslab-radio/getClaps.php",
+  );
+  const clapsJson: Clap[] = await claps.json();
+  return clapsJson;
+};
 
 type Clap = { id: number; count: number };
 
@@ -13,17 +21,40 @@ const ProgramCards = (props: { programs: Program[] }) => {
 
   useEffect(() => {
     const inner = async () => {
-      const claps = await fetch(
-        "https://www3.yoslab.net/~nishimura/yoslab-radio/getClaps.php",
-      );
-      const clapsJson: Clap[] = await claps.json();
-      setClaps(clapsJson);
+      const claps = await getClaps();
+      setClaps(claps);
     };
     inner();
+
+    setInterval(async () => {
+      const claps = await getClaps();
+      setClaps(claps);
+    }, 1000);
   }, []);
 
-  const handleOnClick = () => {
-  };
+  const handleOnClick = useCallback(async (id: number) => {
+    const postItem = { id: id };
+    await fetch(
+      "https://www3.yoslab.net/~nishimura/yoslab-radio/updateClap.php",
+      {
+        method: "POST",
+        body: JSON.stringify(postItem),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      },
+    );
+    /*
+    console.log(id);
+    setClaps(
+      claps.map((clap) =>
+        clap.id == id
+          ? { id: id, count: clap.count + 1 }
+          : { id: id, count: clap.count }
+      ),
+    );
+    */
+  }, []);
 
   return (
     <div>
@@ -39,6 +70,7 @@ const ProgramCards = (props: { programs: Program[] }) => {
             playtime={program.playtime}
             isTransition={true}
             clap={clapsCount}
+            handleOnClick={handleOnClick}
           />
         );
       })}

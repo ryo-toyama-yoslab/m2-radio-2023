@@ -8,6 +8,7 @@ import { memo } from "preact/compat";
 type Props = Program & {
   isTransition: boolean;
   clap: number;
+  handleOnClick: (id: number) => Promise<void>;
 };
 
 const ProgramCard = (props: Props) => {
@@ -58,7 +59,10 @@ const ProgramCard = (props: Props) => {
       </div>
       <div class={tw`text-sm mt-6`}>{props.overview}</div>
       <div class={tw`flex justify-end font-bold text-sm mt-6`}>
-        拍手：{props.clap}回
+        <button onClick={() => props.handleOnClick(props.id)}>
+          拍手！
+        </button>
+        {props.clap}回
       </div>
     </div>
   );
