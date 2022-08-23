@@ -8,8 +8,11 @@ const getClaps = async () => {
   const claps = await fetch(
     "https://www3.yoslab.net/~nishimura/yoslab-radio/getClaps.php",
   );
-  const clapsJson: Clap[] = await claps.json();
-  return clapsJson;
+  const clapsJson: Clap[] = await claps.json(); // 降ってくるJSONが全部stringになってる...
+  const clapsWithType = clapsJson.map((clap) => {
+    return { id: Number(clap.id), count: Number(clap.count) };
+  });
+  return clapsWithType;
 };
 
 type Clap = { id: number; count: number };
@@ -26,11 +29,7 @@ const ProgramCards = (props: { programs: Program[] }) => {
 
     setInterval(async () => {
       const newClaps = await getClaps();
-      setClaps((prevClaps) => {
-        return JSON.stringify(prevClaps) !== JSON.stringify(newClaps)
-          ? newClaps
-          : prevClaps;
-      });
+      setClaps(newClaps);
     }, 10000);
   }, []);
 
