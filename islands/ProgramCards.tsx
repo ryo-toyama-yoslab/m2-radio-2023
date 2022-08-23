@@ -1,10 +1,7 @@
 import { Program } from "../types/Program.ts";
 import ProgramCardMemo from "../islands/ProgramCard.tsx";
-import React, {
-  useCallback,
-  useEffect,
-  useState,
-} from "https://esm.sh/v92/preact@10.10.0/compat/src/index";
+import { useCallback, useEffect, useState } from "preact/hooks";
+import React from "https://esm.sh/v92/preact@10.10.0/compat/src/index";
 
 const getClaps = async () => {
   const claps = await fetch(

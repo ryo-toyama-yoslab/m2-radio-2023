@@ -11,8 +11,6 @@ import personalities from "../static/personalities.ts";
 import ProgramCards from "../islands/ProgramCards.tsx";
 
 export default function Home() {
-  const nowPlaying = 0;
-
   return (
     <div
       class={tw`text-[#45454D] overflow-scroll`}
