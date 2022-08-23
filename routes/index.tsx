@@ -9,7 +9,6 @@ import PersonalityCard from "../islands/PersonalityCard.tsx";
 import programs from "../static/programs.ts";
 import personalities from "../static/personalities.ts";
 import ProgramCards from "../islands/ProgramCards.tsx";
-import ProgramCardMemo from "../islands/ProgramCard.tsx";
 
 export default function Home() {
   const nowPlaying = 0;
@@ -22,16 +21,7 @@ export default function Home() {
       <Header />
       <Layout>
         <H1 text="Now Playing" />
-        <ProgramCardMemo
-          id={programs[nowPlaying].id}
-          iconName={programs[nowPlaying].iconName}
-          title={programs[nowPlaying].title}
-          personalityLastNames={programs[nowPlaying].personalityLastNames}
-          overview={programs[nowPlaying].overview}
-          playtime={programs[nowPlaying].playtime}
-          isTransition={false}
-          clap={0}
-        />
+        <ProgramCards programs={[programs[0]]} />
 
         <div class={tw`mt-8`} />
         <H1 text="Personalities" />
