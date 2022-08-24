@@ -35,7 +35,7 @@ export default function header() {
           class={tw`h-8`}
           loading="lazy"
         />
-        <p class={tw`ml-2 mt-1`}>YosLab M2 Radio 2022</p>
+        <a class={tw`ml-2 mt-1`} href="#top">YosLab M2 Radio 2022</a>
       </header>
     </div>
   );

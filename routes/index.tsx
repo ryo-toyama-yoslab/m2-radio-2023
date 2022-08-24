@@ -21,6 +21,7 @@ export default function Home() {
       }}
     >
       <Header />
+      <div id="top" />
       <Layout>
         <H1 text="Now Playing" />
         <ProgramCards programs={[programs[0]]} />
