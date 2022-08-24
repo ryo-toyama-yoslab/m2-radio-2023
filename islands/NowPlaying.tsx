@@ -9,9 +9,11 @@ const getPlaying = async () => {
   const response = await fetch(
     "https://www3.yoslab.net/~nishimura/yoslab-radio/getPlaying.php",
   );
-  const playingJson: number = await response.json();
+  const playingJson = await response.json();
+
   const nowPlaying: Program =
-    programs.find((v) => v.id === Number(playingJson)) || programs[0];
+    programs.find((v) => v.id === Number(playingJson[0].playingId)) ||
+    programs[0];
   return nowPlaying;
 };
 
