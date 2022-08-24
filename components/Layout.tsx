@@ -7,6 +7,7 @@ export default function header(props: { children: JSX.Element[] }) {
     <div
       class={tw`p-6 mx-auto max-w-screen-md`}
     >
+      <div class={tw`mt-16`} />
       {props.children}
     </div>
   );

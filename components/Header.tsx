@@ -27,7 +27,7 @@ export default function header() {
         <meta property="fb:app_id" content="437291081699971" />
       </Head>
       <header
-        class={tw`p-6 h-16 bg-[#9FA6ED] text-white flex flex-row items-center font-black`}
+        class={tw`w-full p-6 h-16 bg-[#9FA6ED] text-white flex flex-row items-center font-black fixed z-50`}
       >
         <img
           src={"/radio_3d.png"}
