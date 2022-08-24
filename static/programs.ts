@@ -11,7 +11,7 @@ const programs: Program[] = [
   },
   {
     id: 2,
-    iconName: "t-rex",
+    iconName: "water_pistol",
     title: "Mr.林のマシンガントーク ~ジョジョ編~",
     personalityLastNames: ["林", "酒井"],
     overview:
@@ -21,7 +21,7 @@ const programs: Program[] = [
 
   {
     id: 3,
-    iconName: "radio",
+    iconName: "water_pistol",
     title: "Mr.林のマシンガントーク ~マーベル編~",
     personalityLastNames: ["鈴木", "林", "田中"],
     overview: "マシンガントークでおなじみのMr.林が，今一番熱いコンテンツについて語る！ジョジョ編ですでにお腹いっぱいの方も必聴！",
@@ -37,7 +37,7 @@ const programs: Program[] = [
   },
   {
     id: 6,
-    iconName: "index_pointing_at_the_viewer",
+    iconName: "old_man",
     title: "みんなの10年後を語ろう",
     personalityLastNames: ["鈴木", "田中", "西村"],
     overview:
@@ -46,7 +46,7 @@ const programs: Program[] = [
   },
   {
     id: 7,
-    iconName: "index_pointing_at_the_viewer",
+    iconName: "face_with_rolling_eyes",
     title: "こいつ変やなって思ったエピソード",
     personalityLastNames: ["鈴木", "西村", "林"],
     overview: "吉野研には変人が多い！？この番組では，パーソナリティの3人が吉野研の人たちの変なエピソードを語る．はずだった...",
@@ -54,7 +54,7 @@ const programs: Program[] = [
   },
   {
     id: 8,
-    iconName: "index_pointing_at_the_viewer",
+    iconName: "dress",
     title: "シス工ファッション委員会",
     personalityLastNames: ["田中", "中村"],
     overview:
@@ -63,7 +63,7 @@ const programs: Program[] = [
   },
   {
     id: 9,
-    iconName: "index_pointing_at_the_viewer",
+    iconName: "face_with_spiral_eyes",
     title: "吉野研で一番大変だったこと",
     personalityLastNames: ["田中", "中村", "西村"],
     overview:
@@ -72,7 +72,7 @@ const programs: Program[] = [
   },
   {
     id: 10,
-    iconName: "index_pointing_at_the_viewer",
+    iconName: "detective",
     title: "お悩み相談",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "みなさんのお悩みにM2が答えます！世の中の課題を解決するのが吉野研．あなたの悩みくらい，M2がスパッと解決してみせましょう．",
@@ -80,7 +80,7 @@ const programs: Program[] = [
   },
   {
     id: 11,
-    iconName: "index_pointing_at_the_viewer",
+    iconName: "church",
     title: "吉野研裁判 ~M2に懺悔を~",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "今まで隠してきたけど，心が痛むこと，ありますよね？この機会に告白しましょう．我々があなたの罪を洗い流します．",
@@ -88,7 +88,7 @@ const programs: Program[] = [
   },
   {
     id: 12,
-    iconName: "index_pointing_at_the_viewer",
+    iconName: "astonished_face",
     title: "M2に「へぇ〜」と言わせたら勝ち",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "みなさんから寄せられた，M2が知らなそうな豆知識・エピソードをを紹介します！何でもは知らないわ．知ってることだけ．",
@@ -96,7 +96,7 @@ const programs: Program[] = [
   },
   {
     id: 13,
-    iconName: "t-rex",
+    iconName: "crown",
     title: "吉野研〇〇ランキング",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "吉野研で一番〇〇な人は誰か！？あなたは名誉（？）を掴み取ることができるか...",
@@ -104,7 +104,7 @@ const programs: Program[] = [
   },
   {
     id: 14,
-    iconName: "t-rex",
+    iconName: "broom",
     title: "田中さんPresents 吉野研雑務振り返りトーク",
     personalityLastNames: ["田中", "中村"],
     overview: "一部界隈では，吉野研で最も雑務をこなしていると言われている田中さん．そんな彼女がこれまでこなしてきた数々の仕事を振り返ります．",
@@ -112,7 +112,7 @@ const programs: Program[] = [
   },
   {
     id: 15,
-    iconName: "t-rex",
+    iconName: "shushing_face",
     title: "この際だから言っておきたいこと",
     personalityLastNames: ["鈴木", "田中", "中村"],
     overview: "先輩・同期・後輩に，言いたいけど言えなかったこと．この機会にぶちまけましょう！",
@@ -120,7 +120,7 @@ const programs: Program[] = [
   },
   {
     id: 16,
-    iconName: "t-rex",
+    iconName: "student",
     title: "大学(院)でやっておくべきこと",
     personalityLastNames: ["酒井", "田中", "西村"],
     overview: "卒業を間近に控えた3人が，大学(院)でやっておくべきことについて語ります！思い返すのは美しい思い出か．それとも後悔か...？",
@@ -128,7 +128,7 @@ const programs: Program[] = [
   },
   {
     id: 17,
-    iconName: "t-rex",
+    iconName: "heart_with_arrow",
     title: "漢の恋バナ",
     personalityLastNames: ["酒井", "林"],
     overview: "M2男児による漢の恋バナ！経験豊富な二人の恋愛エピソードが炸裂？！",
@@ -136,7 +136,7 @@ const programs: Program[] = [
   },
   {
     id: 18,
-    iconName: "t-rex",
+    iconName: "beer_mug",
     title: "鈴木・西村のほろよい雑談",
     personalityLastNames: ["鈴木", "西村"],
     overview:
