@@ -20,7 +20,7 @@ const ProgramCard = (props: Props) => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.4,
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
