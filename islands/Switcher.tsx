@@ -49,20 +49,23 @@ const Switcher = () => {
   }, []);
 
   return (
-    <ul class={tw`flex flex-col justify-center`}>
+    <ul class={tw`flex flex-col justify-center mt-4`}>
       {programs.map((program) => {
         return (
           <label
             key={program.id}
-            class={tw`flex flex-row justify-start items-center mt-2`}
+            class={tw`flex flex-row justify-start items-center mt-2 border-1 border-[#9B9B9F] rounded-lg py-4 px-4 font-bold`}
           >
             <input
               type="radio"
               value={program.id}
               onChange={handleChange}
               checked={Number(playing.id) === Number(program.id)}
+              class={tw`peer accent-[#9FA6ED]`}
             />
-            <div>
+            <div
+              class={tw`peer-checked:text-[#9FA6ED] peer-checked:font-bold ml-3`}
+            >
               {program.title}
             </div>
           </label>
