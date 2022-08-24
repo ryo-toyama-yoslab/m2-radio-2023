@@ -30,7 +30,7 @@ const ProgramCards = (props: { programs: Program[] }) => {
     setInterval(async () => {
       const newClaps = await getClaps();
       setClaps(newClaps);
-    }, 10000);
+    }, 2000);
   }, []);
 
   const handleOnClick = useCallback(async (id: number) => {
