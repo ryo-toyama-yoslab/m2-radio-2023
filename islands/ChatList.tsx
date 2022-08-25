@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
+import Chat from "../types/Chat.ts";
 
 const getChats = (): Chat[] => {
   /*
@@ -49,8 +50,6 @@ const getChats = (): Chat[] => {
   ];
 };
 
-type Chat = { iconName: string; date?: string; text: string };
-
 const ChatList = () => {
   const [chatList, setChatList] = useState<Chat[]>([]);
 
@@ -79,7 +78,7 @@ const ChatList = () => {
               class={tw`flex flex-row justify-start items-start mt-4 w-full`}
             >
               <img
-                src={`/${chat.iconName}.png`}
+                src={`/icon/${chat.iconName}.png`}
                 alt={`/${chat.iconName}`}
                 class={tw`block w-10 h-10`}
                 loading="lazy"

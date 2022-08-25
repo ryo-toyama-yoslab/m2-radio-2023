@@ -5,6 +5,7 @@ import Header from "../components/Header.tsx";
 import H1 from "../components/H1.tsx";
 import NowPlaying from "../islands/NowPlaying.tsx";
 import ChatList from "../islands/ChatList.tsx";
+import ChatForm from "../islands/ChatForm.tsx";
 
 export default function Home() {
   return (
@@ -35,12 +36,7 @@ export default function Home() {
         <div class={tw`mt-[169px]`} />
         <ChatList />
       </div>
-      <div
-        class={tw`w-full p-6 bg-[#9FA6ED] text-white
-        flex flex-row items-center font-black fixed bottom-0 z-50`}
-      >
-        form!
-      </div>
+      <ChatForm />
     </div>
   );
 }
