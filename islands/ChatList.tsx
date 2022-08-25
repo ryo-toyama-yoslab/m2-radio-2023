@@ -45,7 +45,7 @@ const ChatList = () => {
   };
 
   const innerSec = async () => {
-    const id = chatList.length > 0 ? chatList.slice(-1)[0].id : 0;
+    const id = chatList.length > 0 ? chatList[0].id : 0;
     const newChats = (await getChats(id));
     return newChats;
   };
@@ -56,7 +56,8 @@ const ChatList = () => {
     clearInterval(timer);
     const innerTimer = setInterval(async () => {
       const newChatLists = await innerSec();
-      setChatList((prev) => [...prev, ...newChatLists]);
+      console.log(newChatLists);
+      setChatList((prev) => [...newChatLists, ...prev]);
     }, 1000);
     setTimer(innerTimer);
   }, [chatList]);
@@ -65,7 +66,7 @@ const ChatList = () => {
     <div
       class={tw`flex flex-col justify-items-stretch items-stretch mb-24`}
     >
-      {[...chatList].reverse().map((chat) => <ChatMemo chat={chat} />)}
+      {chatList.map((chat) => <ChatMemo chat={chat} />)}
     </div>
   );
 };
