@@ -17,7 +17,9 @@ const getPlaying = async () => {
   return nowPlaying;
 };
 
-const NowPlaying = () => {
+const NowPlaying = (props: {
+  isCompact: boolean;
+}) => {
   const [playing, setPlaying] = useState<Program>(programs[0]);
 
   useEffect(() => {
@@ -35,9 +37,15 @@ const NowPlaying = () => {
 
   return (
     <div>
-      <ProgramCards programs={[playing]} />
+      {!props.isCompact
+        ? <ProgramCards programs={[playing]} />
+        : <div>compact!</div>}
     </div>
   );
+};
+
+NowPlaying.defaultProps = {
+  isCompact: false,
 };
 
 export default NowPlaying;
