@@ -25,6 +25,15 @@ export default function Home() {
       <Layout>
         <H1 text="Now Playing" />
         <NowPlaying />
+        <a
+          class={tw`flex flex-row justify-center items-center mt-4 
+            font-bold text-xl active:underline
+            border-2 p-4 rounded-full bg-[#9FA6ED] text-white
+            `}
+          href="/chat"
+        >
+          Join Chat !
+        </a>
 
         <div class={tw`mt-8`} />
         <H1 text="Personalities" />

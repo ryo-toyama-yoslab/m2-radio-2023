@@ -19,6 +19,13 @@ export default function Home() {
       <Header />
       <div id="top" />
       <Layout>
+        <a
+          class={tw`text-[#9FA6ED] font-bold text-sm active:underline`}
+          href="/"
+        >
+          &lt; TOP
+        </a>
+        <div class={tw`mt-2`} />
         <NowPlaying isCompact={true} />
         <div class={tw`mt-2`} />
         <H1 text="Chat"></H1>
