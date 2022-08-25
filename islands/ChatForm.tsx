@@ -91,15 +91,15 @@ const ChatList = () => {
     >
       <button
         onClick={handleOnClickChangeIcon}
-        class={tw`flex flex-col items-center font-bold text-xs text-white`}
+        class={tw`flex flex-col justify-center items-center font-bold text-xs text-white`}
       >
         <img
           src={`/icon/${iconName}.png`}
           alt={`/${iconName}`}
-          class={tw`block w-10 h-10 transition-all active:scale-[2] duration-100`}
+          class={tw`block w-10 transition-all active:scale-[2] duration-100`}
           loading="lazy"
         />
-        <div>Change!</div>
+        <div class={tw`w-14`}>Change!</div>
       </button>
       <div class={tw`w-full max-w-fit px-6 flex justify-center items-center`}>
         <textarea
@@ -118,10 +118,10 @@ const ChatList = () => {
         <img
           src={`/send.png`}
           alt={`submit`}
-          class={tw`block w-10 h-10 transition-all active:scale-[1.5] duration-100`}
+          class={tw`w-10 transition-all active:scale-[1.5] duration-100`}
           loading="lazy"
         />
-        <div>Send</div>
+        <div class={tw`w-12`}>Send!</div>
       </button>
     </div>
   );

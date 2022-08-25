@@ -17,7 +17,7 @@ export default function Chat() {
         "touch-action": "manipulation",
       }}
     >
-      <div class={tw`fixed top-0 w-full p-6 bg-white`}>
+      <div class={tw`fixed top-0 w-full px-6 pt-6 pb-4 bg-white`}>
         <a
           class={tw`text-[#9FA6ED] font-bold text-sm active:underline`}
           href="/"
@@ -33,7 +33,7 @@ export default function Chat() {
       <div
         class={tw`p-6 mx-auto max-w-screen-md flex flex-col justify-between`}
       >
-        <div class={tw`mt-[169px]`} />
+        <div class={tw`mt-[161px]`} />
         <ChatList />
       </div>
       <ChatForm />
