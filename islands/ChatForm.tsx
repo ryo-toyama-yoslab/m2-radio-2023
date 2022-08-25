@@ -2,7 +2,6 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
-import Chat from "../types/Chat.ts";
 import iconNames from "../static/iconNames.ts";
 
 const getRandomArray = (array: string[]) => {
@@ -23,7 +22,9 @@ const ChatList = () => {
   const [iconName, setIconName] = useState<string>(getRandomIconName(""));
   const [formText, setFormText] = useState<string>("");
 
-  const handleOnClickSend = async (props: Chat) => {
+  const handleOnClickSend = async (
+    props: { text: string; iconName: string },
+  ) => {
     const { text, iconName } = props;
     const clearText = text.trim();
     if (clearText === "") return;

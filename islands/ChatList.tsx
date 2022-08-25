@@ -3,12 +3,22 @@ import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
 import Chat from "../types/Chat.ts";
+import ChatMemo from "./Chat.tsx";
 
-const getChats = async (): Promise<Chat[]> => {
-  const claps = await fetch(
+const getChats = async (id: number): Promise<Chat[]> => {
+  const chats = await fetch(
     "https://www3.yoslab.net/~nishimura/yoslab-radio/getChats.php",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        "id": id,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    },
   );
-  const chatsJson = await claps.json();
+  const chatsJson = await chats.json();
   const chatsWithType = chatsJson.map((chat: {
     id: string;
     chat_text: string;
@@ -27,54 +37,29 @@ const getChats = async (): Promise<Chat[]> => {
 
 const ChatList = () => {
   const [chatList, setChatList] = useState<Chat[]>([]);
+  const [timer, setTimer] = useState<number>();
+
+  const innerSec = async () => {
+    const id = chatList.length > 0 ? chatList.slice(-1)[0].id : 0;
+    const newChats = (await getChats(id));
+    console.log(newChats);
+    return newChats;
+  };
 
   useEffect(() => {
-    const inner = async () => {
-      const newChats = await getChats();
-      setChatList(newChats);
-    };
-    inner();
-
-    setInterval(async () => {
-      const newChats = await getChats();
-      setChatList(newChats);
-    }, 2000);
-  }, []);
+    clearInterval(timer);
+    const innerTimer = setInterval(async () => {
+      const newChatLists = await innerSec();
+      setChatList((prev) => [...prev, ...newChatLists]);
+    }, 3000);
+    setTimer(innerTimer);
+  }, [chatList]);
 
   return (
     <div
       class={tw`flex flex-col justify-items-stretch items-stretch mb-24`}
     >
-      {chatList.map((chat) => {
-        {
-          return (
-            <div
-              class={tw`flex flex-row justify-start items-start mt-4 w-full`}
-            >
-              <img
-                src={`/icon/${chat.iconName}.png`}
-                alt={`/${chat.iconName}`}
-                class={tw`block w-10 h-10`}
-                loading="lazy"
-              />
-              <div
-                class={tw`w-full pl-4`}
-              >
-                <div
-                  class={tw`bg-[#E9E9EA] rounded-[10px] p-4 font-bold`}
-                >
-                  <p>{chat.text}</p>
-                  <p
-                    class={tw`flex justify-end text-xs font-light text-[#9B9B9F] mt-2`}
-                  >
-                    {chat.date}
-                  </p>
-                </div>
-              </div>
-            </div>
-          );
-        }
-      })}
+      {chatList.map((chat) => <ChatMemo chat={chat} />)}
     </div>
   );
 };
