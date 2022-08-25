@@ -3,6 +3,7 @@ import { h } from "preact";
 import { useCallback, useEffect, useState } from "preact/hooks";
 import { Program } from "../types/Program.ts";
 import ProgramCardMemo from "../islands/ProgramCard.tsx";
+import ProgramCardCompact from "./ProgramCardCompact.tsx";
 
 const getClaps = async () => {
   const claps = await fetch(
@@ -17,7 +18,7 @@ const getClaps = async () => {
 
 type Clap = { id: number; count: number };
 
-const ProgramCards = (props: { programs: Program[] }) => {
+const ProgramCards = (props: { programs: Program[]; isCompact: boolean }) => {
   const [claps, setClaps] = useState<Clap[]>([]);
 
   useEffect(() => {
@@ -57,22 +58,36 @@ const ProgramCards = (props: { programs: Program[] }) => {
     <div>
       {props.programs.map((program) => {
         const clapsCount = claps.find((v) => v.id == program.id)?.count || 0;
-        return (
-          <ProgramCardMemo
-            id={program.id}
-            iconName={program.iconName}
-            title={program.title}
-            personalityLastNames={program.personalityLastNames}
-            overview={program.overview}
-            playtime={program.playtime}
-            isTransition={true}
-            clap={clapsCount}
-            handleOnClick={handleOnClick}
-          />
-        );
+        {
+          return !props.isCompact
+            ? (
+              <ProgramCardMemo
+                id={program.id}
+                iconName={program.iconName}
+                title={program.title}
+                personalityLastNames={program.personalityLastNames}
+                overview={program.overview}
+                playtime={program.playtime}
+                isTransition={true}
+                clap={clapsCount}
+                handleOnClick={handleOnClick}
+              />
+            )
+            : (
+              <ProgramCardCompact
+                program={program}
+                clap={clapsCount}
+                handleOnClick={handleOnClick}
+              />
+            );
+        }
       })}
     </div>
   );
+};
+
+ProgramCards.defaultProps = {
+  isCompact: false,
 };
 
 export default ProgramCards;

@@ -8,8 +8,9 @@ import * as $2 from "./routes/switcher.tsx";
 import * as $$0 from "./islands/NowPlaying.tsx";
 import * as $$1 from "./islands/PersonalityCard.tsx";
 import * as $$2 from "./islands/ProgramCard.tsx";
-import * as $$3 from "./islands/ProgramCards.tsx";
-import * as $$4 from "./islands/Switcher.tsx";
+import * as $$3 from "./islands/ProgramCardCompact.tsx";
+import * as $$4 from "./islands/ProgramCards.tsx";
+import * as $$5 from "./islands/Switcher.tsx";
 
 const manifest = {
   routes: {
@@ -21,8 +22,9 @@ const manifest = {
     "./islands/NowPlaying.tsx": $$0,
     "./islands/PersonalityCard.tsx": $$1,
     "./islands/ProgramCard.tsx": $$2,
-    "./islands/ProgramCards.tsx": $$3,
-    "./islands/Switcher.tsx": $$4,
+    "./islands/ProgramCardCompact.tsx": $$3,
+    "./islands/ProgramCards.tsx": $$4,
+    "./islands/Switcher.tsx": $$5,
   },
   baseUrl: import.meta.url,
 };

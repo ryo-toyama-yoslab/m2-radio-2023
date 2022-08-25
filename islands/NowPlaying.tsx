@@ -37,9 +37,7 @@ const NowPlaying = (props: {
 
   return (
     <div>
-      {!props.isCompact
-        ? <ProgramCards programs={[playing]} />
-        : <div>compact!</div>}
+      <ProgramCards programs={[playing]} isCompact={props.isCompact} />
     </div>
   );
 };

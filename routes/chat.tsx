@@ -19,8 +19,9 @@ export default function Home() {
       <Header />
       <div id="top" />
       <Layout>
-        <H1 text="Chat"></H1>
         <NowPlaying isCompact={true} />
+        <div class={tw`mt-2`} />
+        <H1 text="Chat"></H1>
       </Layout>
     </div>
   );
