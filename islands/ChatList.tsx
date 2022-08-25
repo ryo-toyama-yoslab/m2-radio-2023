@@ -56,8 +56,10 @@ const ChatList = () => {
     clearInterval(timer);
     const innerTimer = setInterval(async () => {
       const newChatLists = await innerSec();
-      console.log(newChatLists);
-      setChatList((prev) => [...newChatLists, ...prev]);
+      setChatList((prev) => {
+        // console.log(prev);
+        return [...newChatLists, ...prev];
+      });
     }, 1000);
     setTimer(innerTimer);
   }, [chatList]);
