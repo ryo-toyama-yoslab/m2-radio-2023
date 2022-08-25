@@ -32,7 +32,6 @@ const ChatList = () => {
   };
 
   const handleOnClickChangeIcon = () => {
-    // アイコンを変更
     const newIconName = getRandomIconName(iconName);
     setIconName(newIconName);
   };
@@ -54,7 +53,7 @@ const ChatList = () => {
         <img
           src={`/icon/${iconName}.png`}
           alt={`/${iconName}`}
-          class={tw`block w-10 h-10`}
+          class={tw`block w-10 h-10 transition-all active:scale-[2] duration-100`}
           loading="lazy"
         />
         <div>Change!</div>

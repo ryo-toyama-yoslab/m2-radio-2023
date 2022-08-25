@@ -69,7 +69,7 @@ const ChatList = () => {
 
   return (
     <div
-      class={tw`flex flex-col justify-items-stretch items-stretch mb-20`}
+      class={tw`flex flex-col justify-items-stretch items-stretch mb-24`}
     >
       {chatList.map((chat) => {
         {
