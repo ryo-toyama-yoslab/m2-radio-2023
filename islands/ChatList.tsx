@@ -39,18 +39,24 @@ const ChatList = () => {
   const [chatList, setChatList] = useState<Chat[]>([]);
   const [timer, setTimer] = useState<number>();
 
+  const inner = async () => {
+    const newChats = (await getChats(0));
+    setChatList(newChats);
+  };
+
   const innerSec = async () => {
-    const revChatList = chatList.reverse();
-    const id = revChatList.length > 0 ? revChatList.slice(-1)[0].id : 0;
+    const id = chatList.length > 0 ? chatList.slice(-1)[0].id : 0;
     const newChats = (await getChats(id));
     return newChats;
   };
 
   useEffect(() => {
+    if (chatList.length === 0) inner();
+
     clearInterval(timer);
     const innerTimer = setInterval(async () => {
       const newChatLists = await innerSec();
-      setChatList((prev) => [...prev, ...newChatLists].reverse());
+      setChatList((prev) => [...prev, ...newChatLists]);
     }, 1000);
     setTimer(innerTimer);
   }, [chatList]);
@@ -59,7 +65,7 @@ const ChatList = () => {
     <div
       class={tw`flex flex-col justify-items-stretch items-stretch mb-24`}
     >
-      {chatList.map((chat) => <ChatMemo chat={chat} />)}
+      {[...chatList].reverse().map((chat) => <ChatMemo chat={chat} />)}
     </div>
   );
 };
