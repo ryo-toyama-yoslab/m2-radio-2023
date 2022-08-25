@@ -36,7 +36,7 @@ export default function Home() {
         <ChatList />
       </div>
       <div
-        class={tw`w-full p-6 h-16 bg-[#9FA6ED] text-white
+        class={tw`w-full p-6 bg-[#9FA6ED] text-white
         flex flex-row items-center font-black fixed bottom-0 z-50`}
       >
         form!

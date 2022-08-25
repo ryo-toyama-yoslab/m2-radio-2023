@@ -21,7 +21,12 @@ const getChats = (): Chat[] => {
       date: "2020-01-02",
       text: "hey",
     },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
+    {
+      iconName: "t-rex_3d",
+      date: "2020-01-01",
+      text:
+        "マシンガントークでおなじみのMr.林が，今一番熱いコンテンツについて語る！第一弾となる「ジョジョ編」では，あなたをジョジョの世界に引き込みます．",
+    },
     { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
     { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
     { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
@@ -65,11 +70,36 @@ const ChatList = () => {
 
   return (
     <div
-      class={tw`flex flex-col justify-items-stretch items-stretch bg-black mb-20`}
+      class={tw`flex flex-col justify-items-stretch items-stretch mb-20`}
     >
       {chatList.map((chat) => {
         {
-          return <div>{JSON.stringify(chat)}</div>;
+          return (
+            <div
+              class={tw`flex flex-row justify-start items-start mt-4 w-full`}
+            >
+              <img
+                src={`/${chat.iconName}.png`}
+                alt={`/${chat.iconName}`}
+                class={tw`block w-10 h-10`}
+                loading="lazy"
+              />
+              <div
+                class={tw`w-full pl-4`}
+              >
+                <div
+                  class={tw`bg-[#E9E9EA] rounded-[10px] p-4 font-bold`}
+                >
+                  <p>{chat.text}</p>
+                  <p
+                    class={tw`flex justify-end text-xs font-light text-[#9B9B9F] mt-1`}
+                  >
+                    {chat.date}
+                  </p>
+                </div>
+              </div>
+            </div>
+          );
         }
       })}
     </div>
