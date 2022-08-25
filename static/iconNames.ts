@@ -17,6 +17,22 @@ const iconNames = [
   "panda_3d",
   "hatching_chick_3d",
   "penguin_3d",
+  "duck_3d",
+  "parrot_3d",
+  "dragon_face_3d",
+  "turtle_3d",
+  "seal_3d",
+  "dolphin_3d",
+  "sauropod_3d",
+  "snail_3d",
+  "bug_3d",
+  "fox_3d",
+  "raccoon_3d",
+  "lion_3d",
+  "tiger_face_3d",
+  "peacock_3d",
+  "chicken_3d",
+  "dodo_3d",
 ];
 
 export default iconNames;
