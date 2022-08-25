@@ -3,6 +3,7 @@ import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
 import Chat from "../types/Chat.ts";
+import iconNames from "../static/iconNames.ts";
 
 const getRandomArray = (array: string[]) => {
   const rand = Math.random() * array.length | 0;
@@ -10,12 +11,6 @@ const getRandomArray = (array: string[]) => {
 };
 
 const getRandomIconName = (nowIconName: string) => {
-  const iconNames = [
-    "t-rex_3d",
-    "crab_3d",
-    "frog_3d",
-    "spouting_whale_3d",
-  ];
   let newIconName = "";
   for (let i = 0;; i++) {
     newIconName = getRandomArray(iconNames);
@@ -118,7 +113,7 @@ const ChatList = () => {
         <img
           src={`/send.png`}
           alt={`submit`}
-          class={tw`w-10 transition-all active:scale-[1.5] duration-100`}
+          class={tw`block w-10 transition-all active:scale-[2] duration-100`}
           loading="lazy"
         />
         <div class={tw`w-12`}>Send!</div>
