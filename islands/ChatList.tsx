@@ -40,9 +40,9 @@ const ChatList = () => {
   const [timer, setTimer] = useState<number>();
 
   const innerSec = async () => {
-    const id = chatList.length > 0 ? chatList.slice(-1)[0].id : 0;
+    const revChatList = chatList.reverse();
+    const id = revChatList.length > 0 ? revChatList.slice(-1)[0].id : 0;
     const newChats = (await getChats(id));
-    console.log(newChats);
     return newChats;
   };
 
@@ -50,8 +50,8 @@ const ChatList = () => {
     clearInterval(timer);
     const innerTimer = setInterval(async () => {
       const newChatLists = await innerSec();
-      setChatList((prev) => [...prev, ...newChatLists]);
-    }, 3000);
+      setChatList((prev) => [...prev, ...newChatLists].reverse());
+    }, 1000);
     setTimer(innerTimer);
   }, [chatList]);
 
