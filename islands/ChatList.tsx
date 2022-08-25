@@ -4,50 +4,25 @@ import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
 import Chat from "../types/Chat.ts";
 
-const getChats = (): Chat[] => {
-  /*
+const getChats = async (): Promise<Chat[]> => {
   const claps = await fetch(
-    "https://www3.yoslab.net/~nishimura/yoslab-radio/getClaps.php",
+    "https://www3.yoslab.net/~nishimura/yoslab-radio/getChats.php",
   );
-  const clapsJson: Clap[] = await claps.json(); // 降ってくるJSONが全部stringになってる...
-  const clapsWithType = clapsJson.map((clap) => {
-    return { id: Number(clap.id), count: Number(clap.count) };
+  const chatsJson = await claps.json();
+  const chatsWithType = chatsJson.map((chat: {
+    id: string;
+    text: string;
+    created_at: Date;
+    icon_name: string;
+  }) => {
+    return {
+      id: Number(chat.id),
+      text: chat.text,
+      date: chat.created_at,
+      iconName: chat.icon_name,
+    };
   });
-  return clapsWithType;
-  */
-  return [
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    {
-      iconName: "t-rex_3d",
-      date: "2020-01-02",
-      text: "hey",
-    },
-    {
-      iconName: "t-rex_3d",
-      date: "2020-01-01",
-      text:
-        "マシンガントークでおなじみのMr.林が，今一番熱いコンテンツについて語る！第一弾となる「ジョジョ編」では，あなたをジョジョの世界に引き込みます．",
-    },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-    { iconName: "t-rex_3d", date: "2020-01-01", text: "wwww" },
-  ];
+  return chatsWithType;
 };
 
 const ChatList = () => {
@@ -62,7 +37,6 @@ const ChatList = () => {
 
     setInterval(async () => {
       const newChats = await getChats();
-      // console.log(newChats);
       setChatList(newChats);
     }, 2000);
   }, []);

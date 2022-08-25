@@ -7,7 +7,7 @@ import NowPlaying from "../islands/NowPlaying.tsx";
 import ChatList from "../islands/ChatList.tsx";
 import ChatForm from "../islands/ChatForm.tsx";
 
-export default function Home() {
+export default function Chat() {
   return (
     <div
       class={tw`text-[#45454D] overflow-scroll`}

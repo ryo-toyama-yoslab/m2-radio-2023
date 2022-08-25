@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
+import Chat from "../types/Chat.ts";
 
 const getRandomArray = (array: string[]) => {
   const rand = Math.random() * array.length | 0;
@@ -27,8 +28,31 @@ const ChatList = () => {
   const [iconName, setIconName] = useState<string>(getRandomIconName(""));
   const [formText, setFormText] = useState<string>("");
 
-  const handleOnClickSend = async (text: string) => {
+  const handleOnClickSend = async (props: Chat) => {
+    const { text, iconName } = props;
+    const clearText = text.trim();
+    if (clearText === "") return;
+    console.log("hello");
     // dbにテキストを送信
+    try {
+      const response = await fetch(
+        "https://www3.yoslab.net/~nishimura/yoslab-radio/insertChat.php",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            text: clearText,
+            iconName: iconName,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+      );
+      const responseJson = await response.json();
+    } catch (error) {
+      console.error(error);
+    }
+    setFormText("");
   };
 
   const handleOnClickChangeIcon = () => {
@@ -87,7 +111,7 @@ const ChatList = () => {
         ref={textAreaRef}
       />
       <button
-        onClick={() => handleOnClickSend(formText)}
+        onClick={() => handleOnClickSend({ text: formText, iconName })}
         class={tw`flex flex-col items-center font-bold text-xs text-white`}
       >
         <img
