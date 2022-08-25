@@ -32,7 +32,6 @@ const ChatList = () => {
     const { text, iconName } = props;
     const clearText = text.trim();
     if (clearText === "") return;
-    console.log("hello");
     // dbにテキストを送信
     try {
       const response = await fetch(
@@ -40,15 +39,15 @@ const ChatList = () => {
         {
           method: "POST",
           body: JSON.stringify({
-            text: clearText,
-            iconName: iconName,
+            "chatText": clearText,
+            "iconName": iconName,
           }),
           headers: {
             "Content-Type": "application/json",
           },
         },
       );
-      const responseJson = await response.json();
+      console.log(await response.json());
     } catch (error) {
       console.error(error);
     }
@@ -78,7 +77,6 @@ const ChatList = () => {
       element.style.height = "auto";
       element.style.height =
         `calc(${element.scrollHeight}px + ${paddingTop} + ${paddingBottom} + ${borderTopWidth} + ${borderBottomWidth} - 24px)`;
-      console.log(element.style.height);
     }, [value]);
 
     return ref;
@@ -103,19 +101,22 @@ const ChatList = () => {
         />
         <div>Change!</div>
       </button>
-      <textarea
-        type="text"
-        value={formText}
-        onChange={handleOnChange}
-        class={tw`p-2 rounded-[10px] resize-none focus:border-[#9B9B9F] outline-none transition-all`}
-        ref={textAreaRef}
-      />
+      <div class={tw`w-full max-w-fit px-6 flex justify-center items-center`}>
+        <textarea
+          type="text"
+          value={formText}
+          onChange={handleOnChange}
+          class={tw`px-4 py-2 w-full rounded-[10px] resize-none focus:border-[#9B9B9F] outline-none transition-all`}
+          ref={textAreaRef}
+        />
+      </div>
       <button
-        onClick={() => handleOnClickSend({ text: formText, iconName })}
+        onClick={() =>
+          handleOnClickSend({ text: formText, iconName: iconName })}
         class={tw`flex flex-col items-center font-bold text-xs text-white`}
       >
         <img
-          src={`/icon/t-rex_3d.png`}
+          src={`/send.png`}
           alt={`submit`}
           class={tw`block w-10 h-10 transition-all active:scale-[1.5] duration-100`}
           loading="lazy"

@@ -11,13 +11,13 @@ const getChats = async (): Promise<Chat[]> => {
   const chatsJson = await claps.json();
   const chatsWithType = chatsJson.map((chat: {
     id: string;
-    text: string;
+    chat_text: string;
     created_at: Date;
     icon_name: string;
   }) => {
     return {
       id: Number(chat.id),
-      text: chat.text,
+      text: chat.chat_text,
       date: chat.created_at,
       iconName: chat.icon_name,
     };
@@ -65,7 +65,7 @@ const ChatList = () => {
                 >
                   <p>{chat.text}</p>
                   <p
-                    class={tw`flex justify-end text-xs font-light text-[#9B9B9F] mt-1`}
+                    class={tw`flex justify-end text-xs font-light text-[#9B9B9F] mt-2`}
                   >
                     {chat.date}
                   </p>
