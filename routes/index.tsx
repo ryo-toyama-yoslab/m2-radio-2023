@@ -28,7 +28,7 @@ export default function Home() {
         <a
           class={tw`flex flex-row justify-center items-center mt-4 
             font-bold text-xl active:underline
-            border-2 p-4 rounded-full bg-[#9FA6ED] text-white
+            p-4 rounded-full bg-[#9FA6ED] text-white
             `}
           href="/chat"
         >
