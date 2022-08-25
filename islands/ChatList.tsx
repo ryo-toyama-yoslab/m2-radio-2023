@@ -62,7 +62,7 @@ const ChatList = () => {
 
     setInterval(async () => {
       const newChats = await getChats();
-      console.log(newChats);
+      // console.log(newChats);
       setChatList(newChats);
     }, 2000);
   }, []);

@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
-import { useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
 
 const getRandomArray = (array: string[]) => {
@@ -27,7 +27,7 @@ const ChatList = () => {
   const [iconName, setIconName] = useState<string>(getRandomIconName(""));
   const [formText, setFormText] = useState<string>("");
 
-  const handleOnClickSend = async () => {
+  const handleOnClickSend = async (text: string) => {
     // dbにテキストを送信
   };
 
@@ -41,14 +41,35 @@ const ChatList = () => {
     setFormText(target.value);
   };
 
+  const useAutoResizeTextArea = (value: string | undefined) => {
+    const ref = useRef<HTMLTextAreaElement>(null);
+
+    useEffect(() => {
+      const element = ref.current;
+      if (!element) return;
+
+      const { borderTopWidth, borderBottomWidth, paddingTop, paddingBottom } =
+        getComputedStyle(element);
+
+      element.style.height = "auto";
+      element.style.height =
+        `calc(${element.scrollHeight}px + ${paddingTop} + ${paddingBottom} + ${borderTopWidth} + ${borderBottomWidth} - 24px)`;
+      console.log(element.style.height);
+    }, [value]);
+
+    return ref;
+  };
+
+  const textAreaRef = useAutoResizeTextArea(formText);
+
   return (
     <div
-      class={tw`w-full p-6 bg-[#9FA6ED] text-white
-        flex flex-row items-center font-black fixed bottom-0 z-50`}
+      class={tw`w-full p-6 bg-[#9FA6ED]
+        flex flex-row justify-between items-end font-black fixed bottom-0 z-50`}
     >
       <button
         onClick={handleOnClickChangeIcon}
-        class={tw`flex flex-col items-center font-bold text-xs`}
+        class={tw`flex flex-col items-center font-bold text-xs text-white`}
       >
         <img
           src={`/icon/${iconName}.png`}
@@ -57,6 +78,25 @@ const ChatList = () => {
           loading="lazy"
         />
         <div>Change!</div>
+      </button>
+      <textarea
+        type="text"
+        value={formText}
+        onChange={handleOnChange}
+        class={tw`p-2 rounded-[10px] resize-none focus:border-[#9B9B9F] outline-none transition-all`}
+        ref={textAreaRef}
+      />
+      <button
+        onClick={() => handleOnClickSend(formText)}
+        class={tw`flex flex-col items-center font-bold text-xs text-white`}
+      >
+        <img
+          src={`/icon/t-rex_3d.png`}
+          alt={`submit`}
+          class={tw`block w-10 h-10 transition-all active:scale-[1.5] duration-100`}
+          loading="lazy"
+        />
+        <div>Send</div>
       </button>
     </div>
   );
