@@ -68,7 +68,11 @@ const ChatList = () => {
     <div
       class={tw`flex flex-col justify-items-stretch items-stretch mb-24`}
     >
-      {chatList.map((chat) => <ChatMemo chat={chat} />)}
+      {chatList.map((chat) => (
+        <div key={chat.id}>
+          <ChatMemo chat={chat} />
+        </div>
+      ))}
     </div>
   );
 };
