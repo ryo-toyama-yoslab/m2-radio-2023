@@ -72,7 +72,7 @@ export default function Container() {
         <img
           src={`/gallery/g1.jpg`}
           alt={`The recording`}
-          class={tw`block rounded-[10px]`}
+          class={tw`block rounded-[10px] w-full`}
           loading="lazy"
         />
       </Layout>
