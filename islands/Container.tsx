@@ -10,26 +10,33 @@ import personalities from "../static/personalities.ts";
 import ProgramCards from "../islands/ProgramCards.tsx";
 import NowPlaying from "../islands/NowPlaying.tsx";
 import { Ref, useRef } from "preact/hooks";
+import ContentMargin from "../components/ContentMagin.tsx";
+import Contents from "./Contents.tsx";
 
 export default function Container() {
-  const top = useRef<HTMLDivElement>(null);
+  const topRef = useRef<HTMLDivElement>(null);
+  const personalityRef = useRef<HTMLDivElement>(null);
+  const programsRef = useRef<HTMLDivElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
 
-  const handleOnClick = (id: string) => {
-    let box: Ref<HTMLDivElement> = top;
-    box.current?.scrollIntoView({ behavior: "smooth" });
+  const handleOnClick = (id?: string) => {
+    let box = topRef;
+    if (id === "Personalities") box = personalityRef;
+    if (id === "Programs") box = programsRef;
+    if (id === "Gallery") box = galleryRef;
+    box.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <div
       class={tw`text-[#45454D] overflow-scroll`}
       style={{
-        "scroll-behavior": "smooth",
         "height": "100svh",
         "touch-action": "manipulation",
       }}
     >
       <Header handleOnClick={handleOnClick} />
-      <div id="top" ref={top} />
+      <div id="top" ref={topRef} />
       <Layout>
         <H1 text="Now Playing" />
         <NowPlaying />
@@ -44,12 +51,30 @@ export default function Container() {
         </a>
 
         <div class={tw`mt-8`} />
+        <H1 text="Contents" />
+        <div class={tw`mt-4`} />
+        <Contents handleOnClick={handleOnClick} />
+
+        <div id="personality" ref={personalityRef} />
+        <ContentMargin />
         <H1 text="Personalities" />
         <PersonalityCard personalities={personalities} />
 
-        <div class={tw`mt-8`} />
-        <H1 text="Contents" />
+        <div id="programs" ref={programsRef} />
+        <ContentMargin />
+        <H1 text="Programs" />
         <ProgramCards programs={programs} />
+
+        <div id="gallery" ref={galleryRef} />
+        <ContentMargin />
+        <H1 text="Gallery" />
+        <div class={tw`mt-4`} />
+        <img
+          src={`/gallery/g1.jpg`}
+          alt={`The recording`}
+          class={tw`block rounded-[10px]`}
+          loading="lazy"
+        />
       </Layout>
     </div>
   );

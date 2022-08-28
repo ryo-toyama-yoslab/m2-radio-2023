@@ -9,12 +9,13 @@ import * as $$0 from "./islands/Chat.tsx";
 import * as $$1 from "./islands/ChatForm.tsx";
 import * as $$2 from "./islands/ChatList.tsx";
 import * as $$3 from "./islands/Container.tsx";
-import * as $$4 from "./islands/NowPlaying.tsx";
-import * as $$5 from "./islands/PersonalityCard.tsx";
-import * as $$6 from "./islands/ProgramCard.tsx";
-import * as $$7 from "./islands/ProgramCardCompact.tsx";
-import * as $$8 from "./islands/ProgramCards.tsx";
-import * as $$9 from "./islands/Switcher.tsx";
+import * as $$4 from "./islands/Contents.tsx";
+import * as $$5 from "./islands/NowPlaying.tsx";
+import * as $$6 from "./islands/PersonalityCard.tsx";
+import * as $$7 from "./islands/ProgramCard.tsx";
+import * as $$8 from "./islands/ProgramCardCompact.tsx";
+import * as $$9 from "./islands/ProgramCards.tsx";
+import * as $$10 from "./islands/Switcher.tsx";
 
 const manifest = {
   routes: {
@@ -27,12 +28,13 @@ const manifest = {
     "./islands/ChatForm.tsx": $$1,
     "./islands/ChatList.tsx": $$2,
     "./islands/Container.tsx": $$3,
-    "./islands/NowPlaying.tsx": $$4,
-    "./islands/PersonalityCard.tsx": $$5,
-    "./islands/ProgramCard.tsx": $$6,
-    "./islands/ProgramCardCompact.tsx": $$7,
-    "./islands/ProgramCards.tsx": $$8,
-    "./islands/Switcher.tsx": $$9,
+    "./islands/Contents.tsx": $$4,
+    "./islands/NowPlaying.tsx": $$5,
+    "./islands/PersonalityCard.tsx": $$6,
+    "./islands/ProgramCard.tsx": $$7,
+    "./islands/ProgramCardCompact.tsx": $$8,
+    "./islands/ProgramCards.tsx": $$9,
+    "./islands/Switcher.tsx": $$10,
   },
   baseUrl: import.meta.url,
 };
