@@ -9,7 +9,7 @@ import programs from "../static/programs.ts";
 import personalities from "../static/personalities.ts";
 import ProgramCards from "../islands/ProgramCards.tsx";
 import NowPlaying from "../islands/NowPlaying.tsx";
-import { Ref, useRef } from "preact/hooks";
+import { useRef } from "preact/hooks";
 import ContentMargin from "../components/ContentMagin.tsx";
 import Contents from "./Contents.tsx";
 

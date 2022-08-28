@@ -1,7 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import Layout from "../components/Layout.tsx";
 import Switcher from "../islands/Switcher.tsx";
 import H1 from "../components/H1.tsx";
 import NowPlaying from "../islands/NowPlaying.tsx";
