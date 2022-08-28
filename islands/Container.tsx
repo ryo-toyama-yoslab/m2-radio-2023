@@ -42,7 +42,7 @@ export default function Container() {
         <NowPlaying />
         <a
           class={tw`flex flex-row justify-center items-center mt-4 
-            font-bold text-xl active:underline
+            font-bold text-xl  transition-all active:opacity-50 hover:opacity-50
             p-4 rounded-full bg-[#9FA6ED] text-white
             `}
           href="/chat"
