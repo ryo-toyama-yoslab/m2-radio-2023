@@ -3,7 +3,11 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { Head } from "$fresh/src/runtime/head.ts";
 
-export default function header() {
+type Props = {
+  handleOnClick: (id: string) => void;
+};
+
+export default function header(props: Props) {
   const title = "YosLab M2 Radio 2022";
   const description = "吉野研M2ラジオ2022の紹介ページ";
   const url = "https://yoslab-radio.deno.dev/";
@@ -35,7 +39,9 @@ export default function header() {
           class={tw`h-8`}
           loading="lazy"
         />
-        <a class={tw`ml-2 mt-1`} href="#top">YosLab M2 Radio 2022</a>
+        <a class={tw`ml-2 mt-1`} onClick={() => props.handleOnClick("top")}>
+          YosLab M2 Radio 2022
+        </a>
       </header>
     </div>
   );
