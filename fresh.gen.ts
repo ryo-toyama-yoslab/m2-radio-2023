@@ -8,15 +8,16 @@ import * as $2 from "./routes/switcher.tsx";
 import * as $$0 from "./islands/Chat.tsx";
 import * as $$1 from "./islands/ChatForm.tsx";
 import * as $$2 from "./islands/ChatList.tsx";
-import * as $$3 from "./islands/Container.tsx";
-import * as $$4 from "./islands/Contents.tsx";
-import * as $$5 from "./islands/Gallery.tsx";
-import * as $$6 from "./islands/NowPlaying.tsx";
-import * as $$7 from "./islands/PersonalityCard.tsx";
-import * as $$8 from "./islands/ProgramCard.tsx";
-import * as $$9 from "./islands/ProgramCardCompact.tsx";
-import * as $$10 from "./islands/ProgramCards.tsx";
-import * as $$11 from "./islands/Switcher.tsx";
+import * as $$3 from "./islands/ChatTop.tsx";
+import * as $$4 from "./islands/Container.tsx";
+import * as $$5 from "./islands/Contents.tsx";
+import * as $$6 from "./islands/Gallery.tsx";
+import * as $$7 from "./islands/NowPlaying.tsx";
+import * as $$8 from "./islands/PersonalityCard.tsx";
+import * as $$9 from "./islands/ProgramCard.tsx";
+import * as $$10 from "./islands/ProgramCardCompact.tsx";
+import * as $$11 from "./islands/ProgramCards.tsx";
+import * as $$12 from "./islands/Switcher.tsx";
 
 const manifest = {
   routes: {
@@ -28,15 +29,16 @@ const manifest = {
     "./islands/Chat.tsx": $$0,
     "./islands/ChatForm.tsx": $$1,
     "./islands/ChatList.tsx": $$2,
-    "./islands/Container.tsx": $$3,
-    "./islands/Contents.tsx": $$4,
-    "./islands/Gallery.tsx": $$5,
-    "./islands/NowPlaying.tsx": $$6,
-    "./islands/PersonalityCard.tsx": $$7,
-    "./islands/ProgramCard.tsx": $$8,
-    "./islands/ProgramCardCompact.tsx": $$9,
-    "./islands/ProgramCards.tsx": $$10,
-    "./islands/Switcher.tsx": $$11,
+    "./islands/ChatTop.tsx": $$3,
+    "./islands/Container.tsx": $$4,
+    "./islands/Contents.tsx": $$5,
+    "./islands/Gallery.tsx": $$6,
+    "./islands/NowPlaying.tsx": $$7,
+    "./islands/PersonalityCard.tsx": $$8,
+    "./islands/ProgramCard.tsx": $$9,
+    "./islands/ProgramCardCompact.tsx": $$10,
+    "./islands/ProgramCards.tsx": $$11,
+    "./islands/Switcher.tsx": $$12,
   },
   baseUrl: import.meta.url,
 };

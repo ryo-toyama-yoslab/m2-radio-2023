@@ -7,9 +7,8 @@ export default function header(
 ) {
   return (
     <div
-      class={tw`p-6 mx-auto max-w-screen-md`}
+      class={tw`p-6 mx-auto max-w-screen-md pt-24`}
     >
-      <div class={tw`mt-16`} />
       {props.children}
     </div>
   );

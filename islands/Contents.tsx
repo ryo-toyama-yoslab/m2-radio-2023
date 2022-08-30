@@ -4,6 +4,10 @@ import { tw } from "@twind";
 
 const contents = [
   {
+    name: "Chats",
+    iconPath: "speech_balloon_3d",
+  },
+  {
     name: "Personalities",
     iconPath: "man_raising_hand_3d_default",
   },
@@ -31,7 +35,7 @@ export default function Contents(props: Props) {
           <li
             class={tw`mt-2 flex flex-row justify-start items-center
             border-2 border-[#9FA6ED] rounded-[10px] px-4 py-2
-            transition-all active:opacity-50 hover:opacity-50`}
+            transition-all active:opacity-50`}
             onClick={() => props.handleOnClick(content.name)}
             key={index}
           >

@@ -13,15 +13,18 @@ import { useRef } from "preact/hooks";
 import ContentMargin from "../components/ContentMagin.tsx";
 import Contents from "./Contents.tsx";
 import Gallery from "./Gallery.tsx";
+import ChatTop from "./ChatTop.tsx";
 
 export default function Container() {
   const topRef = useRef<HTMLDivElement>(null);
+  const chatRef = useRef<HTMLDivElement>(null);
   const personalityRef = useRef<HTMLDivElement>(null);
   const programsRef = useRef<HTMLDivElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
 
   const handleOnClick = (id?: string) => {
     let box = topRef;
+    if (id === "Chats") box = chatRef;
     if (id === "Personalities") box = personalityRef;
     if (id === "Programs") box = programsRef;
     if (id === "Gallery") box = galleryRef;
@@ -41,20 +44,16 @@ export default function Container() {
       <Layout>
         <H1 text="Now Playing" />
         <NowPlaying />
-        <a
-          class={tw`flex flex-row justify-center items-center mt-4 
-            font-bold text-xl  transition-all active:opacity-50 hover:opacity-50
-            p-4 rounded-full bg-[#9FA6ED] text-white
-            `}
-          href="/chat"
-        >
-          Join Chat !
-        </a>
 
-        <div class={tw`mt-8`} />
+        <ContentMargin />
         <H1 text="Contents" />
         <div class={tw`mt-4`} />
         <Contents handleOnClick={handleOnClick} />
+
+        <div id="chat" ref={chatRef} />
+        <ContentMargin />
+        <H1 text="Chats" />
+        <ChatTop />
 
         <div id="personality" ref={personalityRef} />
         <ContentMargin />
