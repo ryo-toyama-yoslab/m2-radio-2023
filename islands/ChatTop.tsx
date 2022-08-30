@@ -60,7 +60,7 @@ const ChatTop = () => {
       {Array(2).fill(0).map((_, i) => {
         return (
           <div
-            class={tw`flex flex-col justify-center items-center font-black text-[#9B9B9F]`}
+            class={tw`flex flex-col justify-center items-center font-black text-[#9FA6ED]`}
           >
             ・
           </div>
