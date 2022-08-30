@@ -4,7 +4,7 @@ import { tw } from "@twind";
 
 const contents = [
   {
-    name: "Chats",
+    name: "Chat",
     iconPath: "speech_balloon_3d",
   },
   {

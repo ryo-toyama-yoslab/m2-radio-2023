@@ -24,7 +24,7 @@ export default function Container() {
 
   const handleOnClick = (id?: string) => {
     let box = topRef;
-    if (id === "Chats") box = chatRef;
+    if (id === "Chat") box = chatRef;
     if (id === "Personalities") box = personalityRef;
     if (id === "Programs") box = programsRef;
     if (id === "Gallery") box = galleryRef;
@@ -52,7 +52,7 @@ export default function Container() {
 
         <div id="chat" ref={chatRef} />
         <ContentMargin />
-        <H1 text="Chats" />
+        <H1 text="Chat" />
         <ChatTop />
 
         <div id="personality" ref={personalityRef} />
