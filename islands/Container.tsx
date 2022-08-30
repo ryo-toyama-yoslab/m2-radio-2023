@@ -12,6 +12,7 @@ import NowPlaying from "../islands/NowPlaying.tsx";
 import { useRef } from "preact/hooks";
 import ContentMargin from "../components/ContentMagin.tsx";
 import Contents from "./Contents.tsx";
+import Gallery from "./Gallery.tsx";
 
 export default function Container() {
   const topRef = useRef<HTMLDivElement>(null);
@@ -69,12 +70,7 @@ export default function Container() {
         <ContentMargin />
         <H1 text="Gallery" />
         <div class={tw`mt-4`} />
-        <img
-          src={`/gallery/g1.jpg`}
-          alt={`The recording`}
-          class={tw`block rounded-[10px] w-full`}
-          loading="lazy"
-        />
+        <Gallery />
       </Layout>
     </div>
   );
