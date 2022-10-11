@@ -7,7 +7,7 @@ const programs: Program[] = [
     title: "オープニング",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "まずはここから！",
-    playtime: 10,
+    playtime: 7,
   },
   {
     id: 10,
@@ -15,7 +15,7 @@ const programs: Program[] = [
     title: "お悩み相談",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "みなさんのお悩みにM2が答えます！世の中の課題を解決するのが吉野研．あなたの悩みくらい，M2がスパッと解決してみせましょう．",
-    playtime: 21,
+    playtime: 28,
   },
   {
     id: 7,
@@ -23,7 +23,7 @@ const programs: Program[] = [
     title: "こいつ変やなって思ったエピソード",
     personalityLastNames: ["鈴木", "西村", "林"],
     overview: "吉野研には変人が多い！？この番組では，パーソナリティの3人が吉野研の人たちの変なエピソードを語る．はずだった...",
-    playtime: 21,
+    playtime: 37,
   },
   {
     id: 15,
@@ -31,7 +31,7 @@ const programs: Program[] = [
     title: "この際だから言っておきたいこと",
     personalityLastNames: ["鈴木", "田中", "中村"],
     overview: "先輩・同期・後輩に，言いたいけど言えなかったこと．この機会にぶちまけましょう！",
-    playtime: 21,
+    playtime: 12,
   },
   {
     id: 8,
@@ -40,7 +40,7 @@ const programs: Program[] = [
     personalityLastNames: ["田中", "中村"],
     overview:
       "M2の紅ニ点が，みんなのお便りを読みながらお届けするフリートーク！タイトル回収はできるのか，全く違う方向に転がっていくのか．予測可能！",
-    playtime: 21,
+    playtime: 30,
   },
   {
     id: 11,
@@ -48,7 +48,7 @@ const programs: Program[] = [
     title: "吉野研裁判 ~M2に懺悔を~",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "今まで隠してきたけど，心が痛むこと，ありますよね？この機会に告白しましょう．我々があなたの罪を洗い流します．",
-    playtime: 21,
+    playtime: 11,
   },
   {
     id: 19,
@@ -56,7 +56,7 @@ const programs: Program[] = [
     title: "林のベスト曲3選",
     personalityLastNames: ["林"],
     overview: "M2林が厳選した3曲紹介します．",
-    playtime: 21,
+    playtime: 16,
   },
   {
     id: 17,
@@ -64,7 +64,7 @@ const programs: Program[] = [
     title: "漢の恋バナ",
     personalityLastNames: ["酒井", "林"],
     overview: "M2男児による漢の恋バナ！経験豊富な二人の恋愛エピソードが炸裂？！",
-    playtime: 21,
+    playtime: 36,
   },
   {
     id: 23,
@@ -72,7 +72,7 @@ const programs: Program[] = [
     title: "鈴木のベスト曲3選",
     personalityLastNames: ["鈴木"],
     overview: "M2鈴木が厳選した3曲紹介します．",
-    playtime: 21,
+    playtime: 17,
   },
   {
     id: 22,
@@ -80,7 +80,7 @@ const programs: Program[] = [
     title: "田中のベスト曲3選",
     personalityLastNames: ["田中"],
     overview: "M2田中が厳選した3曲紹介します．",
-    playtime: 21,
+    playtime: 18,
   },
   {
     id: 12,
@@ -88,7 +88,7 @@ const programs: Program[] = [
     title: "M2が知らなそうなこと",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "みなさんから寄せられた，M2が知らなそうな豆知識・エピソードをを紹介します！何でもは知らないわ．知ってることだけ．",
-    playtime: 21,
+    playtime: 18,
   },
   {
     id: 20,
@@ -96,7 +96,7 @@ const programs: Program[] = [
     title: "西村のベスト曲3選",
     personalityLastNames: ["西村"],
     overview: "M2西村が厳選した3曲紹介します．",
-    playtime: 21,
+    playtime: 30,
   },
   {
     id: 2,
@@ -105,7 +105,7 @@ const programs: Program[] = [
     personalityLastNames: ["林", "酒井"],
     overview:
       "マシンガントークでおなじみのMr.林が，今一番熱いコンテンツについて語る！第1弾となる「ジョジョ編」では，あなたをジョジョの世界に引き込みます．",
-    playtime: 60,
+    playtime: 21,
   },
   {
     id: 18,
@@ -114,7 +114,7 @@ const programs: Program[] = [
     personalityLastNames: ["鈴木", "西村"],
     overview:
       "吉野研でも随一の下戸である二人が，ほんとにお酒を飲みながら雑談するだけの番組です．大量に届いたお便りをすべてさばききれるのか？それとも寝てしまうのか？最後まで必聴です．",
-    playtime: 21,
+    playtime: 62,
   },
   {
     id: 21,
@@ -122,7 +122,7 @@ const programs: Program[] = [
     title: "中村のベスト曲3選",
     personalityLastNames: ["中村"],
     overview: "M2中村が厳選した3曲紹介します．",
-    playtime: 21,
+    playtime: 17,
   },
   {
     id: 13,
@@ -130,7 +130,7 @@ const programs: Program[] = [
     title: "吉野研〇〇ランキング",
     personalityLastNames: ["酒井", "鈴木", "田中", "中村", "西村", "林"],
     overview: "吉野研で一番〇〇な人は誰か！？あなたは名誉（？）を掴み取ることができるか...",
-    playtime: 21,
+    playtime: 47,
   },
   {
     id: 24,
@@ -138,7 +138,7 @@ const programs: Program[] = [
     title: "酒井のベスト曲3選",
     personalityLastNames: ["酒井"],
     overview: "M2酒井が厳選した3曲紹介します．",
-    playtime: 21,
+    playtime: 16,
   },
   {
     id: 6,
@@ -147,7 +147,7 @@ const programs: Program[] = [
     personalityLastNames: ["鈴木", "田中", "西村"],
     overview:
       "吉野研のみんなの10年後をテーマに，あることないことざっくばらんに語ります．浪人経験など，意外と共通点の多い3人のフリートークが聞けるのはここだけ！",
-    playtime: 21,
+    playtime: 19,
   },
   {
     id: 3,
@@ -155,7 +155,7 @@ const programs: Program[] = [
     title: "Mr.林のマシンガントーク ~マーベル編~",
     personalityLastNames: ["鈴木", "林", "田中"],
     overview: "マシンガントークでおなじみのMr.林が，今一番熱いコンテンツについて語る！ジョジョ編ですでにお腹いっぱいの方も必聴！",
-    playtime: 21,
+    playtime: 19,
   },
   {
     id: 5,
