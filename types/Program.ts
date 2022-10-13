@@ -5,4 +5,5 @@ export type Program = {
   personalityLastNames: string[];
   overview: string;
   playtime: number;
+  day: number;
 };

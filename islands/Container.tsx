@@ -14,6 +14,7 @@ import ContentMargin from "../components/ContentMagin.tsx";
 import Contents from "./Contents.tsx";
 import Gallery from "./Gallery.tsx";
 import ChatTop from "./ChatTop.tsx";
+import { Program } from "../types/Program.ts";
 
 export default function Container() {
   const topRef = useRef<HTMLDivElement>(null);
@@ -30,6 +31,11 @@ export default function Container() {
     if (id === "Gallery") box = galleryRef;
     box.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  const [day1content, day2content] = programs.reduce((acc, current) => {
+    if (current.day === 1) return [[...acc[0], current], acc[1]];
+    else return [acc[0], [...acc[1], current]];
+  }, [[], []] as Program[][]);
 
   return (
     <div
@@ -63,7 +69,10 @@ export default function Container() {
         <div id="programs" ref={programsRef} />
         <ContentMargin />
         <H1 text="Programs" />
-        <ProgramCards programs={programs} />
+        <div class={tw`text-3xl font-black mt-8`}>Day1</div>
+        <ProgramCards programs={day1content} />
+        <div class={tw`text-3xl font-black mt-8`}>Day2</div>
+        <ProgramCards programs={day2content} />
 
         <div id="gallery" ref={galleryRef} />
         <ContentMargin />

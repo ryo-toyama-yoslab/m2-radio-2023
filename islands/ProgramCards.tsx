@@ -62,12 +62,7 @@ const ProgramCards = (props: { programs: Program[]; isCompact: boolean }) => {
           return !props.isCompact
             ? (
               <ProgramCardMemo
-                id={program.id}
-                iconName={program.iconName}
-                title={program.title}
-                personalityLastNames={program.personalityLastNames}
-                overview={program.overview}
-                playtime={program.playtime}
+                {...program}
                 isTransition={true}
                 clap={clapsCount}
                 handleOnClick={handleOnClick}
