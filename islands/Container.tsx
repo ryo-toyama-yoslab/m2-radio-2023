@@ -89,7 +89,7 @@ export default function Container() {
         <div class={tw`mt-4`} />
         <Gallery />
 
-        <div class={tw`mt-80`} />
+        <div class={tw`mt-96`} />
 
         <a
           class={tw`mb-[-24px] w-full flex flex-col justify-center items-center`}
