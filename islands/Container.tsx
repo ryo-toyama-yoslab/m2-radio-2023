@@ -15,6 +15,7 @@ import Contents from "./Contents.tsx";
 import Gallery from "./Gallery.tsx";
 import ChatTop from "./ChatTop.tsx";
 import { Program } from "../types/Program.ts";
+import Music from "./Music.tsx";
 
 export default function Container() {
   const topRef = useRef<HTMLDivElement>(null);
@@ -22,6 +23,7 @@ export default function Container() {
   const personalityRef = useRef<HTMLDivElement>(null);
   const programsRef = useRef<HTMLDivElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
+  const musicRef = useRef<HTMLDivElement>(null);
 
   const handleOnClick = (id?: string) => {
     let box = topRef;
@@ -29,6 +31,7 @@ export default function Container() {
     if (id === "Personalities") box = personalityRef;
     if (id === "Programs") box = programsRef;
     if (id === "Gallery") box = galleryRef;
+    if (id === "Music") box = musicRef;
     box.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -79,6 +82,13 @@ export default function Container() {
         <H1 text="Gallery" />
         <div class={tw`mt-4`} />
         <Gallery />
+
+        <div id="music" ref={musicRef} />
+        <ContentMargin />
+        <H1 text="Music" />
+        <div class={tw`mt-4`} />
+        <Music />
+
         <div class={tw`mt-16`} />
       </Layout>
     </div>

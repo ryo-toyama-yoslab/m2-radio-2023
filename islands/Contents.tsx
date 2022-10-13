@@ -19,6 +19,10 @@ const contents = [
     name: "Gallery",
     iconPath: "camera_with_flash_3d",
   },
+  {
+    name: "Music",
+    iconPath: "musical_note_3d",
+  },
 ];
 
 type Props = {
