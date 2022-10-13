@@ -69,9 +69,9 @@ export default function Container() {
         <div id="programs" ref={programsRef} />
         <ContentMargin />
         <H1 text="Programs" />
-        <div class={tw`text-3xl font-black mt-8`}>Day1</div>
+        <div class={tw`text-3xl font-black mt-4`}>Day1</div>
         <ProgramCards programs={day1content} />
-        <div class={tw`text-3xl font-black mt-8`}>Day2</div>
+        <div class={tw`text-3xl font-black mt-16`}>Day2</div>
         <ProgramCards programs={day2content} />
 
         <div id="gallery" ref={galleryRef} />
@@ -79,6 +79,7 @@ export default function Container() {
         <H1 text="Gallery" />
         <div class={tw`mt-4`} />
         <Gallery />
+        <div class={tw`mt-16`} />
       </Layout>
     </div>
   );
