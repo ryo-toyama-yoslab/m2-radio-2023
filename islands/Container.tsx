@@ -77,17 +77,17 @@ export default function Container() {
         <div class={tw`text-3xl font-black mt-16`}>Day2</div>
         <ProgramCards programs={day2content} />
 
-        <div id="gallery" ref={galleryRef} />
-        <ContentMargin />
-        <H1 text="Gallery" />
-        <div class={tw`mt-4`} />
-        <Gallery />
-
         <div id="music" ref={musicRef} />
         <ContentMargin />
         <H1 text="Music" />
         <div class={tw`mt-4`} />
         <Music />
+
+        <div id="gallery" ref={galleryRef} />
+        <ContentMargin />
+        <H1 text="Gallery" />
+        <div class={tw`mt-4`} />
+        <Gallery />
 
         <div class={tw`mt-16`} />
       </Layout>
