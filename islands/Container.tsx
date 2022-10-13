@@ -89,7 +89,20 @@ export default function Container() {
         <div class={tw`mt-4`} />
         <Gallery />
 
-        <div class={tw`mt-16`} />
+        <div class={tw`mt-80`} />
+
+        <a
+          class={tw`mb-[-24px] w-full flex flex-col justify-center items-center`}
+          href="http://web.wakayama-u.ac.jp/~yoshino/lab/"
+          target="_blank"
+        >
+          <p class={`text-[#9FA6ED] font-bold opacity-[0.6]`}>見つかった！</p>
+          <img
+            src="/takashi.png"
+            alt="takashi"
+            class={tw`h-32 mt-4`}
+          />
+        </a>
       </Layout>
     </div>
   );
