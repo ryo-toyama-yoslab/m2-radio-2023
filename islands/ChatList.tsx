@@ -7,6 +7,11 @@ import ChatMemo from "./Chat.tsx";
 
 const getChats = async (id: number): Promise<Chat[]> => {
   const chats = await fetch(
+    /*
+      * [todo] ここはチャットの内容を取得するAPIを作成して差し替える
+      * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
+      * [tweet] なんでPOSTでリクエストしてるのか全くの謎なので、GETでいいと思う
+    */
     "https://www3.yoslab.net/~nishimura/yoslab-radio/getChats.php",
     {
       method: "POST",

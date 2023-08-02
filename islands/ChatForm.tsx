@@ -31,6 +31,10 @@ const ChatList = () => {
     // dbにテキストを送信
     try {
       const response = await fetch(
+        /*
+          * [todo] ここはチャットの内容を書き込むAPIを作成して差し替える
+          * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
+        */
         "https://www3.yoslab.net/~nishimura/yoslab-radio/insertChat.php",
         {
           method: "POST",

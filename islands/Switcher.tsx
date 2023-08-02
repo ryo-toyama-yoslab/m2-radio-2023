@@ -7,6 +7,10 @@ import { tw } from "@twind";
 
 const getPlaying = async () => {
   const response = await fetch(
+    /*
+      * [todo] ここは再生中を取得するAPIを作成して差し替える
+      * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
+    */
     "https://www3.yoslab.net/~nishimura/yoslab-radio/getPlaying.php",
   );
   const playingJson = await response.json();
@@ -19,6 +23,10 @@ const getPlaying = async () => {
 
 const updatePlaying = async (id: number) => {
   await fetch(
+    /*
+      * [todo] ここは再生中を更新するAPIを作成して差し替える
+      * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
+    */
     "https://www3.yoslab.net/~nishimura/yoslab-radio/updatePlaying.php",
     {
       method: "POST",
