@@ -7,7 +7,12 @@ import ProgramCardCompact from "./ProgramCardCompact.tsx";
 
 const getClaps = async () => {
   const claps = await fetch(
-    "https://www3.yoslab.net/~nishimura/yoslab-radio/getClaps.php",
+    /*
+      * [todo] ここは拍手の回数を取得するAPIを作成して差し替える
+      * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
+      * [tweet] ここもClap型を見ればいいと思う
+    */
+    "https://www3.yoslab.net/~toyama/yoslab-radio/getClaps.php",
   );
   const clapsJson: Clap[] = await claps.json(); // 降ってくるJSONが全部stringになってる...
   const clapsWithType = clapsJson.map((clap) => {
@@ -43,6 +48,10 @@ const ProgramCards = (props: { programs: Program[]; isCompact: boolean }) => {
       )
     );
     await fetch(
+      /*
+        * [todo] ここは拍手の回数を更新するAPIを作成して差し替える
+        * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
+      */
       "https://www3.yoslab.net/~nishimura/yoslab-radio/updateClap.php",
       {
         method: "POST",

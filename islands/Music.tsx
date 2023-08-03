@@ -7,6 +7,9 @@ type Music = {
   artist: string;
 };
 
+/*
+  * [todo] ここは当日再生する曲のリストに差し替える
+*/
 const musics: Music[] = [
   {
     title: "The Power Of Love",

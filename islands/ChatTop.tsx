@@ -7,7 +7,12 @@ import ChatMemo from "./Chat.tsx";
 
 const getChats = async (limit: number): Promise<Chat[]> => {
   const chats = await fetch(
-    "https://www3.yoslab.net/~nishimura/yoslab-radio/getChatTop.php",
+    /*
+      * [todo] ここはチャットの内容を取得するAPIを作成して差し替える
+      * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
+      * [tweet] なんでgetChatsとAPIを分けているのかよくわからないので、いい感じに共通化すればいいと思う（パラメータでlimitを渡すとか）
+    */
+    "https://www3.yoslab.net/~toyama/yoslab-radio/getChatTop.php",
     {
       method: "POST",
       body: JSON.stringify({

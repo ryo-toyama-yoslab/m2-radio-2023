@@ -7,7 +7,12 @@ import ProgramCards from "./ProgramCards.tsx";
 
 const getPlaying = async () => {
   const response = await fetch(
-    "https://www3.yoslab.net/~nishimura/yoslab-radio/getPlaying.php",
+    /*
+      * [todo] ここは再生中の内容を取得するAPIを作成して差し替える
+      * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
+      * [tweet] APIレスポンスをハンドリングするとこの型が息してないけど、types/Program.tsを見ればいいと思う
+    */
+    "https://www3.yoslab.net/~toyama/yoslab-radio/getPlaying.php",
   );
   const playingJson = await response.json();
 
