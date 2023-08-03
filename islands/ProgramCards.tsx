@@ -52,7 +52,7 @@ const ProgramCards = (props: { programs: Program[]; isCompact: boolean }) => {
         * [todo] ここは拍手の回数を更新するAPIを作成して差し替える
         * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
       */
-      "https://www3.yoslab.net/~nishimura/yoslab-radio/updateClap.php",
+      "https://www3.yoslab.net/~toyama/yoslab-radio/updateClap.php",
       {
         method: "POST",
         body: JSON.stringify({ id: id }),
