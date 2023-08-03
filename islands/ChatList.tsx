@@ -14,7 +14,7 @@ const getChats = async (id: number): Promise<Chat[]> => {
     */
     "https://www3.yoslab.net/~toyama/yoslab-radio/getChats.php",
     {
-      method: "GET",
+      method: "POST",
       body: JSON.stringify({
         "id": id,
       }),
