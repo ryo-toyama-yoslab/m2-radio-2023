@@ -12,7 +12,7 @@ const getChats = async (id: number): Promise<Chat[]> => {
       * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
       * [tweet] なんでPOSTでリクエストしてるのか全くの謎なので、GETでいいと思う
     */
-    "https://www3.yoslab.net/~nishimura/yoslab-radio/getChats.php",
+    "https://www3.yoslab.net/~toyama/yoslab-radio/getChats.php",
     {
       method: "POST",
       body: JSON.stringify({

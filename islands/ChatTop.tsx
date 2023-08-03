@@ -12,7 +12,7 @@ const getChats = async (limit: number): Promise<Chat[]> => {
       * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
       * [tweet] なんでgetChatsとAPIを分けているのかよくわからないので、いい感じに共通化すればいいと思う（パラメータでlimitを渡すとか）
     */
-    "https://www3.yoslab.net/~nishimura/yoslab-radio/getChatTop.php",
+    "https://www3.yoslab.net/~toyama/yoslab-radio/getChatTop.php",
     {
       method: "POST",
       body: JSON.stringify({

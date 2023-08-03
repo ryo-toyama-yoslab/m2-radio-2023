@@ -12,7 +12,7 @@ const getPlaying = async () => {
       * [tweet] エラーハンドリングとか何もしてないの雑すぎるので直してもいいと思う
       * [tweet] APIレスポンスをハンドリングするとこの型が息してないけど、types/Program.tsを見ればいいと思う
     */
-    "https://www3.yoslab.net/~nishimura/yoslab-radio/getPlaying.php",
+    "https://www3.yoslab.net/~toyama/yoslab-radio/getPlaying.php",
   );
   const playingJson = await response.json();
 
