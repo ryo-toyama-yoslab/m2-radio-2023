@@ -6,7 +6,7 @@ const programs: Program[] = [
     iconName: "radio",
     title: "オープニング",
     personalityLastNames: ["石丸", "草竹", "下津", "外山", "熊倉"],
-    overview: "ついに始まる！2023年吉野研ゼミ旅行をお届けするパーソナリティをご紹介！",
+    overview: "ついに始まる！2023年吉野研ゼミ旅行ラジオをお届けするパーソナリティをご紹介！",
     playtime: 10,
     day: 1,
   },
