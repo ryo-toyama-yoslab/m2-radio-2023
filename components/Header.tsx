@@ -40,7 +40,7 @@ export default function header(props: Props) {
           loading="lazy"
         />
         <a class={tw`ml-2 mt-1`} onClick={() => props.handleOnClick("top")}>
-          YosLab M2 Radio 2022
+          YosLab M2 Radio 2023
         </a>
       </header>
     </div>
