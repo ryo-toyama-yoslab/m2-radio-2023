@@ -50,7 +50,7 @@ const personalities: Personality[] = [
       "変な人がいてんねん",
       "ゼミ旅行までそれ正解！",
       "アツい趣味を教えてくれ",
-      "#吉野研",
+      " ＃吉野研",
       "吉野研〇〇ランキング",
     ],
     imageName: "toyama",
