@@ -12,7 +12,7 @@ const personalities: Personality[] = [
       "恋愛について語りたい",
       "吉野研〇〇ランキング",
     ],
-    imageName: "sakai",
+    imageName: "ishimaru",
   },
   {
     firstName: "大暉",
@@ -40,7 +40,7 @@ const personalities: Personality[] = [
       "恋愛について語りたい",
       "吉野研〇〇ランキング",
     ],
-    imageName: "suzuki",
+    imageName: "shimotu",
   },
   {
     firstName: "怜",
@@ -62,7 +62,7 @@ const personalities: Personality[] = [
     join: [
       "あなたにとってイケメンorかわいいとは？",
     ],
-    imageName: "toyama",
+    imageName: "kumakura",
   },
 ];
 
