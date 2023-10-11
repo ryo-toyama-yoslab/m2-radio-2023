@@ -10,8 +10,8 @@ type Props = {
 export default function header(props: Props) {
   const title = "YosLab M2 Radio 2023";
   const description = "吉野研M2ラジオ2023の紹介ページ";
-  const url = "https://yoslab-radio.deno.dev/";
-  const image = "https://yoslab-radio.deno.dev/og.png";
+  const url = "https://2023-yoslab-radio.deno.dev/";
+  const image = "https://2023-yoslab-radio.deno.dev/og.png";
 
   return (
     <div>
