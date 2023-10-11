@@ -12,124 +12,84 @@ type Music = {
 */
 const musics: Music[] = [
   {
-    title: "The Power Of Love",
-    artist: "Huey Lewis & The News",
+    title: "飛行艇",
+    artist: "King Gnu",
   },
   {
-    title: "Up All Night",
-    artist: "One Direction",
-  },
-  {
-    title: "Everything about you",
-    artist: "One Direction",
-  },
-  {
-    title: "熱情のスペクトラム",
-    artist: "いきものがかり",
-  },
-  {
-    title: "B.B.",
-    artist: "the野党",
-  },
-  {
-    title: "イカロス",
-    artist: "Greeeen",
+    title: "光るなら",
+    artist: "グースハウス",
   },
   {
     title: "初心LOVE",
     artist: "なにわ男子",
   },
   {
-    title: "気まぐれロマンティック",
-    artist: "いきものがかり",
+    title: "Teenager Forever",
+    artist: "King Gnu",
+  },
+  {
+    title: "雫",
+    artist: "スキマスイッチ",
+  },
+  {
+    title: "やさしさに包まれたなら",
+    artist: "荒井由実",
+  },
+  {
+    title: "透明人間",
+    artist: "東京事変",
+  },
+  {
+    title: "Prayer X",
+    artist: "King Gnu",
+  },
+  {
+    title: "PLAY THE GAME",
+    artist: "ロードオブメジャー",
+  },
+  {
+    title: "波乗りジョニー",
+    artist: "桑田佳祐",
   },
   {
     title: "ゴールデンタイムラバー",
     artist: "スキマスイッチ",
   },
   {
-    title: "ブラザービート",
-    artist: "SnowMan",
+    title: "高嶺の花子さん",
+    artist: "back number",
   },
   {
-    title: "アイデア",
-    artist: "星野源",
+    title: "惑星ループ",
+    artist: "Eve feat.ナユタン星人",
   },
   {
-    title: "扉",
-    artist: "Greeeen",
+    title: "ラブレター",
+    artist: "FUNKY MONKY BABYS",
   },
   {
-    title: "メランコリーキッチン",
-    artist: "米津玄師",
-  },
-  {
-    title: "サイレントマジョリティー",
-    artist: "欅坂46",
-  },
-  {
-    title: "Hey Jude",
-    artist: "The Beatles",
-  },
-  {
-    title: "Let It Be",
-    artist: "The Beatles",
-  },
-  {
-    title: "Feel So Moon",
-    artist: "ユニコーン",
-  },
-  {
-    title: "rumors",
-    artist: "Jake Miller",
-  },
-  {
-    title: "W-KEYAKIZAKAの詩",
-    artist: "欅坂46",
-  },
-  {
-    title: "ユリーカ",
-    artist: "スキマスイッチ",
-  },
-  {
-    title: "アイデンティティ",
-    artist: "サカナクション",
-  },
-  {
-    title: "ブルーバード",
+    title: "歩いていこう",
     artist: "いきものがかり",
   },
   {
-    title: "不協和音",
-    artist: "欅坂46",
+    title: "Timeless Love",
+    artist: "なにわ男子",
   },
   {
-    title: "絶体絶命",
-    artist: "東京事変",
+    title: "気まぐれロマンチック",
+    artist: "いきものがかり",
   },
   {
-    title: "花火",
-    artist: "aiko",
+    title: "Ah Yeah!!",
+    artist: "スキマスイッチ",
   },
   {
-    title: "白日",
+    title: "群青讃歌",
+    artist: "Eve",
+  },
+  {
+    title: "傘",
     artist: "King Gnu",
-  },
-  {
-    title: "Happily",
-    artist: "One Direction",
-  },
-  {
-    title: "Kiss You",
-    artist: "One Direction",
-  },
-  {
-    title: "HANABI",
-    artist: "Mr.Children",
-  },
-  {
-    title: "さらば",
-    artist: "キンモクセイ",
   },
 ];
 
