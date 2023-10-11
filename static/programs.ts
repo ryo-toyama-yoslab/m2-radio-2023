@@ -24,7 +24,7 @@ const programs: Program[] = [
     id: 3,
     iconName: "old_man",
     title: "草竹＆吉野先生のぶっちゃけトーク",
-    personalityLastNames: ["草竹", "吉野"],
+    personalityLastNames: ["草竹", "吉野先生"],
     overview: "吉野研で犬猿の仲？とされている草竹と吉野先生が奇跡の対談！一体どのような化学反応が生まれるのか...?",
     playtime: 0,
     day: 1,
