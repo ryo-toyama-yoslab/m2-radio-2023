@@ -12,7 +12,7 @@ const programs: Program[] = [
   },
   {
     id: 2,
-    iconName: "detective",
+    iconName: "zany_face",
     title: "変な人がいてんねん",
     personalityLastNames: ["石丸", "下津", "外山"],
     overview:
@@ -22,7 +22,7 @@ const programs: Program[] = [
   },
   {
     id: 3,
-    iconName: "face_with_rolling_eyes",
+    iconName: "old_man",
     title: "草竹＆吉野先生のぶっちゃけトーク",
     personalityLastNames: ["草竹", "吉野"],
     overview: "吉野研で犬猿の仲？とされている草竹と吉野先生が奇跡の対談！一体どのような化学反応が生まれるのか…?",
@@ -31,7 +31,7 @@ const programs: Program[] = [
   },
   {
     id: 4,
-    iconName: "shushing_face",
+    iconName: "face_in_clouds",
     title: "あなたにとってイケメンorかわいいとは？",
     personalityLastNames: ["草竹", "下津", "熊倉"],
     overview: "人によって魅力的に感じる対象って違いますよね…。結局、イケメン・かわいいってどんな人なのか！ここで明らかにしてみせましょう！",
@@ -40,7 +40,7 @@ const programs: Program[] = [
   },
   {
     id: 5,
-    iconName: "dress",
+    iconName: "index_pointing_at_the_viewer",
     title: "ゼミ旅行までそれ正解！",
     personalityLastNames: ["石丸", "草竹", "下津", "外山"],
     overview:
@@ -50,7 +50,7 @@ const programs: Program[] = [
   },
   {
     id: 6,
-    iconName: "church",
+    iconName: "fire",
     title: "アツい趣味を教えてくれ",
     personalityLastNames: ["石丸", "外山"],
     overview: "吉野研のアツい趣味をもった人からのアツいお便りをご紹介！趣味に生きる石丸と趣味のない外山が雑に語ります。",
@@ -59,7 +59,7 @@ const programs: Program[] = [
   },
   {
     id: 7,
-    iconName: "musical_note",
+    iconName: "beer_mug",
     title: "ほろ酔い雑談",
     personalityLastNames: ["草竹", "下津"],
     overview: "吉野研ニコイチと言われるほど，大の仲良しコンビ，草竹＆下津！お酒も入って，ホテルの収録で，イチャイチャしちゃうかも🙈",
@@ -68,7 +68,7 @@ const programs: Program[] = [
   },
   {
     id: 8,
-    iconName: "heart_with_arrow",
+    iconName: "postbox",
     title: "#吉野研",
     personalityLastNames: ["草竹", "外山"],
     overview: "吉野研では小さなことでも毎日何かが起こってる。そんな何かを経験した誰かのつぶやきを覗いてみよう！",
@@ -77,7 +77,7 @@ const programs: Program[] = [
   },
   {
     id: 9,
-    iconName: "musical_note",
+    iconName: "revolving_hearts",
     title: "恋愛について語りたい",
     personalityLastNames: ["石丸", "下津"],
     overview: "シス工でも...吉野研でも...恋愛はしたい！そんな若者たちのお悩みを，吉野研恋愛マスター？の二人が解決していく！",
@@ -86,7 +86,7 @@ const programs: Program[] = [
   },
   {
     id: 9,
-    iconName: "musical_note",
+    iconName: "sports_medal",
     title: "吉野研〇〇ランキング",
     personalityLastNames: ["石丸", "草竹", "下津", "外山"],
     overview: "吉野研で一番〇〇な人は誰だ！？自分の意外な印象が分かるかも！選ばれるのが良いこととは限らない．．．",
