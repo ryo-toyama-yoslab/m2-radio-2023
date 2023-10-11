@@ -85,7 +85,7 @@ const programs: Program[] = [
     day: 2,
   },
   {
-    id: 9,
+    id: 10,
     iconName: "sports_medal",
     title: "吉野研〇〇ランキング",
     personalityLastNames: ["石丸", "草竹", "下津", "外山"],
@@ -94,7 +94,7 @@ const programs: Program[] = [
     day: 2,
   },
   {
-    id: 10,
+    id: 11,
     iconName: "radio",
     title: "エンディング",
     personalityLastNames: ["石丸", "草竹", "下津", "外山", "熊倉"],
