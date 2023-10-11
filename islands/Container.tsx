@@ -96,7 +96,7 @@ export default function Container() {
           href="http://web.wakayama-u.ac.jp/~yoshino/lab/"
           target="_blank"
         >
-          <p class={`text-[#9FA6ED] font-bold opacity-[0.6]`}>ゼミ旅行たのしすぎだね！</p>
+          <p class={`text-[#9FA6ED] font-bold opacity-[0.6]`}>ゼミ旅行は楽しいね！</p>
           <img
             src="/takashi.png"
             alt="takashi"
