@@ -24,7 +24,7 @@ const personalities: Personality[] = [
       "ほろ酔い雑談",
       "＃吉野研",
     ],
-    imageName: "tanaka",
+    imageName: "kusatake",
   },
   {
     firstName: "拓未",
