@@ -4,7 +4,7 @@ const personalities: Personality[] = [
   {
     firstName: "敬登",
     LastName: "石丸",
-    overview: "~~~",
+    overview: "めんどくさがりなドラえもん",
     join: [
       "変な人がいてんねん",
       "ゼミ旅行までそれ正解！",
@@ -16,7 +16,7 @@ const personalities: Personality[] = [
   {
     firstName: "大暉",
     LastName: "草竹",
-    overview: "~~~",
+    overview: "和大の異端児",
     join: [
       "草竹＆吉野先生のぶっちゃけトーク",
       "あなたにとってイケメンorかわいいとは？",
@@ -29,7 +29,7 @@ const personalities: Personality[] = [
   {
     firstName: "拓未",
     LastName: "下津",
-    overview: "~~~",
+    overview: "奈良の原石",
     join: [
       "変な人がいてんねん",
       "あなたにとってイケメンorかわいいとは？",
@@ -42,7 +42,7 @@ const personalities: Personality[] = [
   {
     firstName: "怜",
     LastName: "外山",
-    overview: "~~~",
+    overview: "吉野研No.1アイドル",
     join: [
       "変な人がいてんねん",
       "ゼミ旅行までそれ正解！",
@@ -54,7 +54,7 @@ const personalities: Personality[] = [
   {
     firstName: "梨華",
     LastName: "熊倉",
-    overview: "~~~",
+    overview: "ゲラゲラの実 ”幻獣種”モデル「萌歌」",
     join: [
       "あなたにとってイケメンorかわいいとは？",
     ],
