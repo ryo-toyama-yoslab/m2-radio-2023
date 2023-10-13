@@ -21,13 +21,13 @@ const programs: Program[] = [
     day: 1,
   },
   {
-    id: 3,
+    id: 8,
     iconName: "old_man",
     title: "草竹＆吉野先生のぶっちゃけトーク",
     personalityLastNames: ["草竹", "吉野先生"],
     overview: "吉野研で犬猿の仲？とされている草竹と吉野先生が奇跡の対談！一体どのような化学反応が生まれるのか...?",
     playtime: 0,
-    day: 1,
+    day: 2,
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const programs: Program[] = [
     day: 1,
   },
   {
-    id: 5,
+    id: 6,
     iconName: "index_pointing_at_the_viewer",
     title: "ゼミ旅行までそれ正解！",
     personalityLastNames: ["石丸", "草竹", "下津", "外山"],
@@ -49,7 +49,7 @@ const programs: Program[] = [
     day: 1,
   },
   {
-    id: 6,
+    id: 7,
     iconName: "fire",
     title: "アツい趣味を教えてくれ",
     personalityLastNames: ["石丸", "外山"],
@@ -58,7 +58,7 @@ const programs: Program[] = [
     day: 2,
   },
   {
-    id: 7,
+    id: 9,
     iconName: "beer_mug",
     title: "ほろ酔い雑談",
     personalityLastNames: ["草竹", "下津"],
@@ -67,22 +67,22 @@ const programs: Program[] = [
     day: 2,
   },
   {
-    id: 8,
+    id: 3,
     iconName: "postbox",
     title: "#吉野研",
     personalityLastNames: ["草竹", "外山"],
     overview: "吉野研では小さなことでも毎日何かが起こってる。そんな何かを経験した誰かのつぶやきを覗いてみよう！",
     playtime: 0,
-    day: 2,
+    day: 1,
   },
   {
-    id: 9,
+    id: 5,
     iconName: "revolving_hearts",
     title: "恋愛について語りたい",
     personalityLastNames: ["石丸", "下津"],
     overview: "シス工でも...吉野研でも...恋愛はしたい！そんな若者たちのお悩みを、吉野研恋愛マスター？の二人が解決していく！",
     playtime: 0,
-    day: 2,
+    day: 1,
   },
   {
     id: 10,
@@ -100,7 +100,7 @@ const programs: Program[] = [
     personalityLastNames: ["石丸", "草竹", "下津", "外山", "熊倉"],
     overview: "全て録音が終えたパーソナリティが語る感想戦(?)。心残りがある人がいるとかいないとか...？",
     playtime: 0,
-    day: 3,
+    day: 2,
   },
 ];
 
